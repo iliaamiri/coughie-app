@@ -1,10 +1,10 @@
-import DisplayBar from "../../components/header/displayBar";
-import MyProgress from "../../components/header/myProgress";
+import DisplayBar from "../../components/displayBar";
+import MyProgress from "../../components/myProgress";
 
 const Tracker = () => (
   <div>
     <DisplayBar name="My progress" />
-    <MyProgress/>
+    <MyProgress />
   </div>
 );
 
