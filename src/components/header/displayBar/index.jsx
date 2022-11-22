@@ -3,7 +3,7 @@ import "./index.css";
 export default function DisplayBar({ name, ...props }) {
   return (
     <div className="display-bar">
-      <h1>{name}</h1>
+      <h4>{name}</h4>
     </div>
   );
 }
