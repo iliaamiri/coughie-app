@@ -1,9 +1,10 @@
-import { h } from "preact";
+import DisplayBar from "../../components/header/displayBar";
+import MyProgress from "../../components/header/myProgress";
 
 const Tracker = () => (
   <div>
-    <h1>Tracker</h1>
-    <p>This is the Tracker component.</p>
+    <DisplayBar name="My progress" />
+    <MyProgress/>
   </div>
 );
 
