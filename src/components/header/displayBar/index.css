@@ -1,7 +1,13 @@
-.display-bar{
-    color: #81CBAC;
-    background-color: #E5F4FA ;
-    border-radius: 1.5rem;
-    padding: 0.8rem 1.2rem;
-    cursor: pointer;
+.display-bar {
+  color: #81cbac;
+  background-color: #e5f4fa;
+  border-radius: 1rem;
+  margin-left: 68%;
+  margin-top: 1rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.1rem;
+  cursor: pointer;
+  text-align: center;
 }
