@@ -1,6 +1,23 @@
-.card{
-    background-color: #D9F1EE;
-    border-radius: 10px;
-    margin: 2rem;
-    padding: 6rem 4rem ;  
+.card {
+  background-color: #d9f1ee;
+  border-radius: 10px;
+  margin: 2rem;
+  padding: 6rem 4rem;
 }
+
+.card-div {
+  display: flex;
+  align-self: center;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  padding-top: 0.1rem;
+}
+
+img.icon {
+  margin-right: 0.5rem;
+}
+
+
