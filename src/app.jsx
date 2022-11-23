@@ -15,7 +15,7 @@ export function App() {
     <>
       <Header />
       <Router>
-        <Home path="/" />
+        <Home path="/home" />
         <Tutorial path="/tutorial" />
         <Checkin path="/daily/checkin" />
         <Plant path="/daily/plant" />

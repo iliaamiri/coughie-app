@@ -1,9 +1,9 @@
-import { h } from "preact";
+import CreateForm from "../../components/questionaire/createForm";
+import "./index.css";
 
 const Home = () => (
-  <div>
-    <h1>Home</h1>
-    <p>This is the Home component.</p>
+  <div className="home-div">
+    <CreateForm />
   </div>
 );
 
