@@ -1,5 +1,3 @@
-import { h } from "preact";
-
 const Communities = () => (
   <div>
     <h1>Communities</h1>

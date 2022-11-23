@@ -6,8 +6,8 @@ const Header = () => (
     <nav>
       <ul>
         <li>
-          <Link className="nav-link" activeClassName="active" href="/">
-            Home
+          <Link className="nav-link" activeClassName="active" href="/home">
+            <img src="../../../public/home.svg" alt="Home" />
           </Link>
         </li>
         <li>
