@@ -1,12 +1,24 @@
 import "./index.css";
-import { useState } from "preact/hooks";
+import { useState, useEffect } from "preact/hooks";
 import smokeFree from "../../assets/smokeFree.png";
 import iconMoney from "../../assets/icon-money.png";
 import noSmoke from "../../assets/noSmoke-icon.png";
 import lifeIcon from "../../assets/life-icon.png";
 import timeSaveIcon from "../../assets/time-saved-icon.png";
+import { getDifferenceInHours, users } from "../../../fakedb.js";
 
 export default function MyProgress() {
+  const [hours, setHours] = useState(0);
+  const newDate = new Date();
+  const oldDate = new Date(users[0].lastTimeVape);
+  useEffect(() => {
+    setHours(getDifferenceInHours(newDate, oldDate));
+  }, []);
+
+  const getMonth = () => {
+    return Math.floor(hours / 720);
+  };
+
   return (
     <div className="card">
       <div className="card-div">
@@ -15,13 +27,15 @@ export default function MyProgress() {
       </div>
       <div className="d-flex w-100 justify-content-between">
         <div>
-          0<p>months</p>
+          {getMonth()}
+          <p>months</p>
         </div>
         <div>
-          0 <p>Days</p>
+          {Math.floor((hours - getMonth() * 720) / 30)} <p>Days</p>
         </div>
         <div>
-          0<p>Hours</p>
+          {hours % 24}
+          <p>Hours</p>
         </div>
       </div>
       <div className="d-flex w-100 justify-content-between">
