@@ -7,9 +7,8 @@ const CreateForm = () => {
     step: 1,
     name: "",
     age: "",
-    lastTime: "",
-    money: "",
-    quitTime: "",
+    lastTimeVape: "",
+    spendMoney: "",
   });
   const nextStep = () => {
     setForm({ ...form, step: form.step + 1 });
@@ -17,47 +16,36 @@ const CreateForm = () => {
   const prevStep = () => {
     setForm({ ...form, step: form.step - 1 });
   };
-  const handleChange = input => e => {
-    setForm({ ...form, [input]: e.target.value });
-  };
-  const handleSubmit = e => {
-    e.preventDefault();
+  const handleSubmit = () => {
     console.log(form);
   };
   const renderSwitch = step => {
     switch (step) {
       case 1:
-        return <NameForm nextStep={nextStep} handleChange={handleChange} />;
+        return <NameForm nextStep={nextStep} form={form} setForm={setForm} />;
       case 2:
         return (
-          <Calendar
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChange={handleChange}
-            question="When was the last time you vaped?"
-          />
-        );
-      case 3:
-        return (
           <Spend
+            form={form}
+            setForm={setForm}
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChange={handleChange}
             question="How much money do you spend per week on vaping?"
           />
         );
-      case 4:
+      case 3:
         return (
           <Calendar
             nextStep={handleSubmit}
             isSubmit={true}
             prevStep={prevStep}
-            handleChange={handleChange}
+            form={form}
+            setForm={setForm}
             question="When was the last time you vaped?"
           />
         );
       default:
-        <NameForm nextStep={nextStep} handleChange={handleChange} />;
+        <NameForm nextStep={nextStep} />;
     }
   };
 
