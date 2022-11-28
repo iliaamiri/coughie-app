@@ -10,10 +10,7 @@ export default function Navbar() {
       <nav>
       <ul>
         <li>
-          {/* <Link className="nav-link" activeClassName="active" href="/daily/checkin">
-            <img className='navButton' src="src/assets/checked.png" alt="checkin" />
-          </Link> */}
-           <Link className="nav-link" >
+           <Link className="nav-link" href="javascript:window.history.back();" >
             <img className='navButton' src="src/assets/previous.png" alt="previous" />
           </Link>
         </li>  <li>

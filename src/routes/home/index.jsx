@@ -1,6 +1,7 @@
 import RememberDialogue from "../../components/rememberDialogue";
 import DisplayBar from "../../components/displayBar";
 import "./index.css";
+import { Link } from 'preact-router/match';
 
 const Home = () => (
   <div 
@@ -13,25 +14,31 @@ const Home = () => (
     <div className="homeMenu">
       <div >
         <div>
+          <Link  href="/achievement">
       <img src="src/assets/SVG/trophy.svg" alt="" />
+      </Link>
       </div>
       <p>achievements</p>
       </div>
       <div>
         <div>
+          <Link href="/daily/plant">
       <img  src="src/assets/SVG/plant.svg" alt="" />
+      </Link>
       </div>
       <p>plant progress</p>
       </div>
       <div>
         <div >
-      <img src="src/assets/SVG/community.svg" alt="" />
+        <Link href="/community">
+      <img src="src/assets/SVG/community.svg" alt="" /></Link>
       </div>
       <p>join a community</p>
       </div>
       <div>
         <div>
-      <img id="check" src="src/assets/check.png" alt="" />
+        <Link href="/daily/checkin">
+      <img id="check" src="src/assets/check.png" alt="" /></Link>
       </div>
       <p>self progress</p>
       </div>
