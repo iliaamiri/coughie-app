@@ -1,0 +1,21 @@
+
+
+.dialogue {
+    color: #798390;
+    font-weight: 400;
+    width: 45vw;
+    border:1.7px solid #9EC6D7;
+    position: absolute;
+    padding: 3.5vw;
+    border-radius: 15px;
+    margin: 7vw 0 0 7vw;
+}
+
+.remember {
+    color: #9EC6D7;
+    font-weight: 500;
+    font-size: 4.5vw;
+    position: relative;
+    right:26vw;
+    top:8vw;
+}
