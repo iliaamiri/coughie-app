@@ -1,3 +1,41 @@
-.home-div {
-    height: 100vh;
+
+p{
+    color: #838383;
+}
+
+.homeMenu {
+    justify-content: center;
+    display:grid;
+    grid-template-columns: 45vw 45vw;
+    grid-row: auto auto;
+ 
+}
+
+
+.homeMenu img {
+    background-color:#E5F4FA;
+    padding:9vw;
+    border-radius:10px;
+    color:#fff;
+    display:flex;
+   
+    width:35.5vw;
+    height: 35vw;
+    /* width:auto; */
+    /* padding: 10vw; */
+}
+
+.homeMenu div {
+    margin: 1vw 1vw 1vw 3vw;
+    align-items:center;
+    justify-content:center;
+}
+
+
+#plant {
+    height: 50vw;
+    width: 37vw;
+    right:4vw;
+    margin: 2.5vw 2vw;
+    position: absolute;
 }

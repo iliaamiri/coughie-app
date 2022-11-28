@@ -8,12 +8,13 @@ import Plant from "./routes/daily/plant";
 import Achievement from "./routes/achievement";
 import Tracker from "./routes/tracker";
 import Communities from "./routes/communities";
+import Navbar from "./components/navbar";
 import "./app.css";
 
 export function App() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Router>
         <Home path="/home" />
         <Tutorial path="/tutorial" />
@@ -23,6 +24,9 @@ export function App() {
         <Tracker path="/tracker" />
         <Communities path="/communities" />
       </Router>
+   
+    <Navbar></Navbar>
     </>
+    
   );
 }

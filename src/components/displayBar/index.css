@@ -1,13 +1,12 @@
 .display-bar {
   color: #81cbac;
-  background-color: #e5f4fa;
-  border-radius: 1rem;
-  margin-left: 68%;
-  margin-top: 1rem;
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
-  padding-top: 0.3rem;
-  padding-bottom: 0.1rem;
-  cursor: pointer;
-  text-align: center;
+  background-color: #EDF9F4;
+  border-radius: 7px;
+  margin: 5vh 0 2.5vh 40vw ;
+  padding: 2vh 1.5vh 1vh 1vh;
+  font-weight:bolder;
+}
+
+.display-bar h4 {
+  font-weight: 600;
 }
