@@ -1,9 +1,10 @@
 const Calendar = ({
   nextStep,
   prevStep,
-  handleChange,
   question,
   isSubmit = false,
+  form,
+  setForm,
 }) => {
   const prevHandler = () => {
     prevStep();
@@ -11,17 +12,23 @@ const Calendar = ({
   const clickHandler = () => {
     nextStep();
   };
+  const changeHandler = e => {
+    setForm({ ...form, lastTimeVape: e.target.value });
+  };
   return (
     <div className="calendar">
       <label htmlFor="calendar">{question}</label>
-      <input id="calendar" type="date" value="" onChange={handleChange} />
+      <input
+        id="calendar"
+        type="date"
+        value={form.lastTimeVape}
+        onChange={changeHandler}
+      />
       <input type="submit" value="Prev" onClick={prevHandler} />
-      {!isSubmit ? (
-        <input type="submit" value="Next" onClick={clickHandler} />
-      ) : (
-        <input type="submit" value="Submit" onClick={clickHandler} />
-      )}
+      <input type="submit" value="Submit" onClick={clickHandler} />
     </div>
   );
 };
 export default Calendar;
+
+
