@@ -8,6 +8,13 @@
 .card-div {
   display: flex;
   align-self: center;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.card-div.moneySaved {
+  padding-bottom: 0.3rem;
+  padding-top: 2rem;
 }
 
 .icon {
@@ -20,4 +27,7 @@ img.icon {
   margin-right: 0.5rem;
 }
 
-
+.moneySaved {
+  margin: 0;
+  padding: auto;
+}
