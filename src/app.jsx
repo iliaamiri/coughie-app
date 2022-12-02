@@ -1,37 +1,37 @@
-import { useState } from 'preact/hooks'
-import Header from './components/header'
-import Home from './routes/home'
-import { Router } from 'preact-router'
-import Tutorial from './routes/tutorial'
-import Checkin from './routes/daily/checkin'
-import Plant from './routes/daily/plant'
-import Achievement from './routes/achievement'
-import Tracker from './routes/tracker'
-import Communities from './routes/communities'
-import Navbar from './components/navbar'
-import Button from './components/button'
-import './app.css'
+import { useState } from "preact/hooks";
+import Header from "./components/header";
+import Home from "./routes/home";
+import { Router } from "preact-router";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Tutorial from "./routes/tutorial";
+import Checkin from "./routes/daily/checkin";
+import Plant from "./routes/daily/plant";
+import Achievement from "./routes/achievement";
+import Tracker from "./routes/tracker";
+import Communities from "./routes/communities";
+import Navbar from "./components/navbar";
+import Button from "./components/button";
+import Questionaire from "./routes/questionaire";
+import "./app.css";
 
 export function App() {
   return (
     <>
       {/* <Header /> */}
-      <Router>
-        <Home path="/home" />
-        <Tutorial path="/tutorial" />
-        <Checkin path="/daily/checkin" />
-        <Plant path="/daily/plant" />
-        <Achievement path="/achievement" />
-        <Tracker path="/tracker" />
-        <Communities path="/communities" />
-      </Router>
-      <div>
-        <h1>Coughie</h1>
-        <p>"the secret to getting ahead is getting started"</p>
-       
-      </div>
-      <Button text="START"></Button>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Questionaire />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/tutorial" element={<Tutorial />} />
+          <Route path="/daily/checkin" element={<Checkin />} />
+          <Route path="/daily/plant" element={<Plant />} />
+          <Route path="/achievement" element={<Achievement />} />
+          <Route path="/tracker" element={<Tracker />} />
+          <Route path="/communities" element={<Communities />} />
+        </Routes>
+      </BrowserRouter>
+
       <Navbar></Navbar>
     </>
-  )
+  );
 }

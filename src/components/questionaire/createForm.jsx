@@ -2,6 +2,7 @@ import { useState } from "preact/hooks";
 import Calendar from "./calendar";
 import NameForm from "./nameForm";
 import Spend from "./spend";
+
 const CreateForm = () => {
   const [form, setForm] = useState({
     step: 1,
@@ -16,9 +17,7 @@ const CreateForm = () => {
   const prevStep = () => {
     setForm({ ...form, step: form.step - 1 });
   };
-  const handleSubmit = () => {
-    console.log(form);
-  };
+  const handleSubmit = () => {};
   const renderSwitch = step => {
     switch (step) {
       case 1:

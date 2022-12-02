@@ -1,16 +1,13 @@
-const Calendar = ({
-  nextStep,
-  prevStep,
-  question,
-  isSubmit = false,
-  form,
-  setForm,
-}) => {
+import MyButton from "../button";
+import { useNavigate } from "react-router-dom";
+
+const Calendar = ({ nextStep, prevStep, question, form, setForm }) => {
+  const navigate = useNavigate();
   const prevHandler = () => {
     prevStep();
   };
   const clickHandler = () => {
-    nextStep();
+    navigate("/home");
   };
   const changeHandler = e => {
     setForm({ ...form, lastTimeVape: e.target.value });
@@ -24,11 +21,9 @@ const Calendar = ({
         value={form.lastTimeVape}
         onChange={changeHandler}
       />
-      <input type="submit" value="Prev" onClick={prevHandler} />
-      <input type="submit" value="Submit" onClick={clickHandler} />
+      <MyButton text="Prev" onClick={prevHandler} />
+      <MyButton text="Submit" onClick={clickHandler} />
     </div>
   );
 };
 export default Calendar;
-
-

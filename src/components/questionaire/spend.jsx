@@ -1,3 +1,5 @@
+import MyButton from "../button";
+
 const Spend = ({ nextStep, prevStep, question, form, setForm }) => {
   const prevHandler = () => {
     prevStep();
@@ -17,8 +19,8 @@ const Spend = ({ nextStep, prevStep, question, form, setForm }) => {
         value={form.spendMoney}
         onChange={changeHandler}
       />
-      <input type="submit" value="Prev" onClick={prevHandler} />
-      <input type="submit" value="Next" onClick={clickHandler} />
+      <MyButton text="Prev" onClick={prevHandler} />
+      <MyButton text="Next" onClick={clickHandler} />
     </div>
   );
 };

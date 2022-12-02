@@ -32,7 +32,7 @@ const NameForm = ({ nextStep, form, setForm }) => {
           onChange={ageHandler}
         />
       </label>
-      <MyButton type={"bottom"} text="next" onClick={clickHandler} />
+      <MyButton text="next" onClick={clickHandler} />
     </div>
   );
 };
