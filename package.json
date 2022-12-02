@@ -12,7 +12,8 @@
     "@preact/signals": "^1.1.2",
     "preact": "^10.11.2",
     "preact-router": "^4.1.0",
-    "react-router-dom": "^6.4.4"
+    "react-router-dom": "^6.4.4",
+    "use-local-storage": "^2.3.6"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.4.0",

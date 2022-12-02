@@ -1,12 +1,13 @@
 import MyButton from "../button";
 import { useNavigate } from "react-router-dom";
+import useLocalStorage from "use-local-storage";
 
-const Calendar = ({ nextStep, prevStep, question, form, setForm }) => {
+const Calendar = ({ prevStep, question, form, setForm }) => {
   const navigate = useNavigate();
   const prevHandler = () => {
     prevStep();
   };
-  const clickHandler = () => {
+  const clickHandler = e => {
     navigate("/home");
   };
   const changeHandler = e => {
