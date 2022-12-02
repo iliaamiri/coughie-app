@@ -1,16 +1,17 @@
-import { useState } from "preact/hooks";
+import useLocalStorage from "use-local-storage";
 import Calendar from "./calendar";
 import NameForm from "./nameForm";
 import Spend from "./spend";
 
 const CreateForm = () => {
-  const [form, setForm] = useState({
+  const [form, setForm] = useLocalStorage("user", {
     step: 1,
     name: "",
     age: "",
     lastTimeVape: "",
     spendMoney: "",
   });
+
   const nextStep = () => {
     setForm({ ...form, step: form.step + 1 });
   };
