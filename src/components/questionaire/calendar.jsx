@@ -2,13 +2,14 @@ import MyButton from "../button";
 import { useNavigate } from "react-router-dom";
 import useLocalStorage from "use-local-storage";
 
-const Calendar = ({ prevStep, question, form, setForm }) => {
+const Calendar = ({ prevStep, question, form, setForm, handleSubmit }) => {
   const navigate = useNavigate();
   const prevHandler = () => {
     prevStep();
   };
   const clickHandler = e => {
     navigate("/home");
+    handleSubmit();
   };
   const changeHandler = e => {
     setForm({ ...form, lastTimeVape: e.target.value });
