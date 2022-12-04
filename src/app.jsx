@@ -12,6 +12,7 @@ import Communities from "./routes/communities";
 import Navbar from "./components/navbar";
 import Button from "./components/button";
 import Questionaire from "./routes/questionaire";
+import Profile from "./routes/user";
 import "./app.css";
 
 export function App() {
@@ -28,6 +29,7 @@ export function App() {
           <Route path="/achievement" element={<Achievement />} />
           <Route path="/tracker" element={<Tracker />} />
           <Route path="/communities" element={<Communities />} />
+          <Route path="/user" element={<Profile />} />
         </Routes>
       </BrowserRouter>
 
