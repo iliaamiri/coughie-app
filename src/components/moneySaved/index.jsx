@@ -1,7 +1,7 @@
 import { useState } from "preact/hooks";
 import "./index.css";
 import iconMoneyBig from "../../assets/icon_money_big.png";
-import { getDifferenceInHours, users } from "../../../fakedb.js";
+import { users } from "../../../fakedb.js";
 import MyButton from "../button";
 import MyGoal from "../myGoal";
 
