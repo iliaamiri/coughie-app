@@ -2,7 +2,7 @@ import "./index.css";
 import smokeFree from "../../assets/smokeFree.png";
 import iconMoney from "../../assets/icon-money.png";
 import noSmoke from "../../assets/noSmoke-icon.png";
-import { getDifferenceInHours, users } from "../../../fakedb.js";
+import { users } from "../../../fakedb.js";
 
 export default function MyProgress({
   clickHandler,
