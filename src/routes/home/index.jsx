@@ -2,18 +2,25 @@ import RememberDialogue from "../../components/rememberDialogue";
 import DisplayBar from "../../components/displayBar";
 import "./index.css";
 import { Link } from "preact-router/match";
-import useLocalStorage from "use-local-storage";
+import { useState, useEffect } from "preact/hooks";
 
 const Home = () => {
-  const [form, setForm] = useLocalStorage("user", {
+  const data = localStorage.getItem("user");
+  const [user, setUser] = useState({
     step: 1,
     name: "",
     age: "",
     lastTimeVape: "",
     spendMoney: "",
+    eCigaretteSaved: 1,
   });
-  const user = JSON.parse(localStorage.getItem("user"));
-  console.log(user);
+
+  useEffect(() => {
+    if (data) {
+      setUser(JSON.parse(data));
+    }
+  }, []);
+
   return (
     <div>
       <DisplayBar name="Your Home" />

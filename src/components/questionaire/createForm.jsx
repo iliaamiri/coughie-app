@@ -1,4 +1,5 @@
 import useLocalStorage from "use-local-storage";
+import Home from "../../routes/home";
 import Calendar from "./calendar";
 import NameForm from "./nameForm";
 import Spend from "./spend";
@@ -12,6 +13,7 @@ const CreateForm = () => {
     spendMoney: "",
     eCigaretteSaved: 1,
   });
+  const data = localStorage.getItem("user");
 
   const nextStep = () => {
     setForm({ ...form, step: form.step + 1 });
@@ -50,8 +52,15 @@ const CreateForm = () => {
         <NameForm nextStep={nextStep} />;
     }
   };
-
-  return <div>{renderSwitch(form.step)}</div>;
+  if (data) {
+    return (
+      <>
+        <Home />
+      </>
+    );
+  } else {
+    return <div>{renderSwitch(form.step)}</div>;
+  }
 };
 
 export default CreateForm;
