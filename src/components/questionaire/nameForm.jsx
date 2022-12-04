@@ -7,7 +7,7 @@ const NameForm = ({ nextStep, form, setForm }) => {
     nextStep();
   };
   const changeHandler = e => {
-    setForm({ ...form, name: e.target.value });
+    setForm({ ...form, uname: e.target.value });
   };
   const ageHandler = e => {
     setForm({ ...form, age: e.target.value });
@@ -19,7 +19,7 @@ const NameForm = ({ nextStep, form, setForm }) => {
         <input
           type="text"
           name="name"
-          value={form.name}
+          value={form.uname}
           onChange={changeHandler}
         />
       </label>

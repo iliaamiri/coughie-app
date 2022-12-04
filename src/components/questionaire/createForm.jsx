@@ -6,10 +6,11 @@ import Spend from "./spend";
 const CreateForm = () => {
   const [form, setForm] = useLocalStorage("user", {
     step: 1,
-    name: "",
+    uname: "",
     age: "",
     lastTimeVape: "",
     spendMoney: "",
+    eCigaretteSaved: 1,
   });
 
   const nextStep = () => {
@@ -30,7 +31,8 @@ const CreateForm = () => {
             setForm={setForm}
             nextStep={nextStep}
             prevStep={prevStep}
-            question="How much money do you spend per week on vaping?"
+            question1="How much money do you spend per week on vaping?"
+            question2="How many ePod do you spend per week?"
           />
         );
       case 3:
