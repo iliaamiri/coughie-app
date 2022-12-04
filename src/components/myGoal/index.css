@@ -1,0 +1,33 @@
+.myGoalLetter {
+  color: #81cbac;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.btnDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.totalMoneyDiv {
+  background-color: #e5f4fa;
+  border-radius: 1.3rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.getWeekly {
+  color: #81cbac;
+  margin: 0;
+  padding: 0;
+}
+
+.productDiv {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3rem;
+  padding-top: 0.9rem;
+}

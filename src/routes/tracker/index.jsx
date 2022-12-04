@@ -25,7 +25,7 @@ const Tracker = () => {
     const diff = Math.abs(date1.getTime() - Number(date2.getTime()));
     return Number(Math.ceil(diff / (1000 * 3600))) - 20;
   };
-  
+
   const clickHandler = () => {
     setIsMoneySaved(true);
   };
@@ -48,6 +48,7 @@ const Tracker = () => {
         />
       ) : (
         <MoneySaved
+          setIsMoneySaved={setIsMoneySaved}
           clickHandler={clickHandler}
           hours={hours}
           getWeeklyMoneySaved={getWeeklyMoneySaved}
