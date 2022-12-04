@@ -1,26 +1,35 @@
 import { useState } from "preact/hooks";
 import "./index.css";
 import iconMoneyBig from "../../assets/icon_money_big.png";
-import { users } from "../../../fakedb.js";
 import MyButton from "../button";
 import MyGoal from "../myGoal";
 
 export default function MoneySaved({ getWeeklyMoneySaved }) {
+  const data = localStorage.getItem("user");
+  const [user, setUser] = useState(
+    JSON.parse(data) || {
+      uname: "",
+      age: "",
+      lastTimeVape: "",
+      spendMoney: "",
+      eCigaretteSaved: "",
+    }
+  );
   const [isClicked, setIsClicked] = useState(false);
   const getDay = () => {
-    return Math.floor(users[0].spendMoney / 7);
+    return Math.floor(user.spendMoney / 7);
   };
 
   const getWeek = () => {
-    return Math.floor(users[0].spendMoney);
+    return Math.floor(user.spendMoney);
   };
 
   const getMonth = () => {
-    return Math.floor(users[0].spendMoney * 4);
+    return Math.floor(user.spendMoney * 4);
   };
 
   const getYear = () => {
-    return Math.floor(users[0].spendMoney * 52);
+    return Math.floor(user.spendMoney * 52);
   };
   const clickHandler = () => {
     setIsClicked(true);
