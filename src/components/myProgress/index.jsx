@@ -2,19 +2,29 @@ import "./index.css";
 import smokeFree from "../../assets/smokeFree.png";
 import iconMoney from "../../assets/icon-money.png";
 import noSmoke from "../../assets/noSmoke-icon.png";
-import { users } from "../../../fakedb.js";
+import { useState } from "preact/hooks";
 
 export default function MyProgress({
   clickHandler,
   hours,
   getWeeklyMoneySaved,
 }) {
+  const data = localStorage.getItem("user");
+  const [user, setUser] = useState(
+    JSON.parse(data) || {
+      uname: "",
+      age: "",
+      lastTimeVape: "",
+      spendMoney: "",
+      eCigaretteSaved: "",
+    }
+  );
   const getMonth = () => {
     return Math.floor(hours / 720);
   };
 
   const getWeeklyVape = () => {
-    return Math.floor((users[0].eCigaretteSaved / 7 / 24) * hours);
+    return Math.floor((user.eCigaretteSaved / 7 / 24) * hours);
   };
 
   return (
