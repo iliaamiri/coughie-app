@@ -9,11 +9,12 @@
   font-size: 2rem;
   font-weight: 600;
 }
-.moneyIcon{
+
+.moneyIcon {
   margin: 0.8rem;
   padding: 0.8rem;
 }
-.getWeekly{
+.getWeekly {
   margin: 0.8rem;
   padding: 0.8rem;
 }
@@ -25,4 +26,14 @@
 .z {
   margin: 0.8rem;
   padding: 0.8rem;
+}
+
+.backBtn {
+  cursor: pointer;
+}
+
+.btnDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
