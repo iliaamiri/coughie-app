@@ -2,7 +2,8 @@ import { useState } from "preact/hooks";
 import MyButton from "../../components/button";
 import CreateForm from "../../components/questionaire/createForm";
 import "./index.css";
-export default function Questionaire() {
+
+export default function Questionnaire() {
   const [isClicked, setIsClicked] = useState(false);
   const clickHandler = () => {
     setIsClicked(!isClicked);

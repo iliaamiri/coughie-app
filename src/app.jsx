@@ -1,7 +1,4 @@
-import { useState } from "preact/hooks";
-import Header from "./components/header";
 import Home from "./routes/home";
-import { Router } from "preact-router";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Tutorial from "./routes/tutorial";
 import Checkin from "./routes/daily/checkin";
@@ -10,8 +7,7 @@ import Achievement from "./routes/achievement";
 import Tracker from "./routes/tracker";
 import Communities from "./routes/communities";
 import Navbar from "./components/navbar";
-import Button from "./components/button";
-import Questionaire from "./routes/questionaire";
+import Questionnaire from "./routes/questionaire";
 import Profile from "./routes/user";
 import "./app.css";
 
@@ -21,7 +17,7 @@ export function App() {
       {/* <Header /> */}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Questionaire />} />
+          <Route path="/" element={<Questionnaire />} />
           <Route path="/home" element={<Home />} />
           <Route path="/tutorial" element={<Tutorial />} />
           <Route path="/daily/checkin" element={<Checkin />} />
