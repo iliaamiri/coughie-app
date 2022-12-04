@@ -6,7 +6,6 @@ export const users = [
         spendMoney: 50,
         eCigaretteSaved: 3,
         lastTimeVape: new Date("2022-03-21").toLocaleDateString(),
-        
     },
     {
         id: 2,
