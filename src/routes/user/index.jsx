@@ -1,6 +1,16 @@
+import { useState } from "preact/hooks";
 const Profile = () => {
   const data = localStorage.getItem("user");
-  const user = JSON.parse(data);
+  const [user, setUser] = useState(
+    JSON.parse(data) || {
+      uname: "John",
+      age: 20,
+      lastTimeVape: "2020-10-10",
+      spendMoney: 10,
+      eCigaretteSaved: 1,
+    }
+  );
+  console.log(user);
 
   return (
     <div>
