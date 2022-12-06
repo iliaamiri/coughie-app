@@ -1,0 +1,59 @@
+div.group-bubble {
+    background-color: #CCEBF6;
+    border-radius: 300vw;
+    margin: 5px;
+}
+
+div.group-bubble.small {
+    width: 35vw;
+    height: 35vw;
+    padding-top: 5.125631329vw;
+}
+
+div.group-bubble.medium {
+    width: 55vw;
+    height: 55vw;
+    padding-top: 8.054563518vw;
+}
+
+div.group-bubble.large {
+    width: 70vw;
+    height: 70vw;
+    padding-top: 10.251262659vw;
+}
+
+div.group-bubble .safe-wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.group-bubble .safe-wrapper.small {
+    height: 24.748737342vw;
+    width: 24.748737342vw;
+}
+
+div.group-bubble .safe-wrapper.medium {
+    height: 38.890872965vw;
+    width: 38.890872965vw;
+}
+
+div.group-bubble .safe-wrapper.large {
+    height: 49.497474683vw;
+    width: 49.497474683vw;
+}
+
+div.group-bubble.animate {
+    animation: MoveUpDown 10s linear infinite;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10px, 10px);
+    }
+}
