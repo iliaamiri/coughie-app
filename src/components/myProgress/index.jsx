@@ -1,7 +1,7 @@
 import "./index.css";
-import smokeFree from "../../assets/smokeFree.png";
-import iconMoney from "../../assets/icon-money.png";
-import noSmoke from "../../assets/noSmoke-icon.png";
+import smokeFree from "../../../public/assets/smokeFree.png";
+import iconMoney from "../../../public/assets/icon-money.png";
+import noSmoke from "../../../public/assets/nosmoke-icon.png";
 import { useState } from "preact/hooks";
 
 export default function MyProgress({

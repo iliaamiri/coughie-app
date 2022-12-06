@@ -1,7 +1,7 @@
 import "./index.css";
-import backBtn from "../../assets/back_btn.png";
-import appleWatch from "../../assets/appleWatch.png";
-import keyboard from "../../assets/keyboard.png";
+import backBtn from "../../../public/assets/back_btn.png";
+import appleWatch from "../../../public/assets/appleWatch.png";
+import keyboard from "../../../public/assets/keyboard.png";
 import { useState } from "preact/hooks";
 
 export default function MyGoal({ setIsClicked, getWeeklyMoneySaved }) {

@@ -7,7 +7,7 @@ p{
     justify-content: center;
     display:grid;
     grid-template-columns: 45vw 45vw;
-    grid-row: auto auto;
+    grid-row: auto;
 }
 
 

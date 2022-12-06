@@ -3,7 +3,8 @@ import useLocalStorage from "use-local-storage";
 import MyButton from "../../components/button";
 import CreateForm from "../../components/questionaire/createForm";
 import "./index.css";
-export default function Questionaire() {
+
+export default function Questionnaire() {
   const data = localStorage.getItem("user");
   const [isClicked, setIsClicked] = useState(false);
   const clickHandler = () => {
@@ -16,7 +17,7 @@ export default function Questionaire() {
     <div className="questionaire">
       <div>
         <div>
-          <img src="../../src/assets/main.png" alt="main" />
+          <img src="../../../public/assets/main.png" alt="main" />
         </div>
         <h1>Coughie</h1>
         <p>"the secret to getting ahead is getting started"</p>
