@@ -5,7 +5,11 @@ import backBtn from "../../assets/back_btn.png";
 import MyButton from "../button";
 import MyGoal from "../myGoal";
 
-export default function MoneySaved({ getWeeklyMoneySaved, setIsMoneySaved }) {
+export default function MoneySaved({
+  getWeeklyMoneySaved,
+  setIsMoneySaved,
+  hours,
+}) {
   const data = localStorage.getItem("user");
   const [user, setUser] = useState(
     JSON.parse(data) || {
@@ -16,21 +20,70 @@ export default function MoneySaved({ getWeeklyMoneySaved, setIsMoneySaved }) {
       eCigaretteSaved: "",
     }
   );
+  console.log(user.spendMoney);
   const [isClicked, setIsClicked] = useState(false);
+
   const getDay = () => {
-    return Math.floor(user.spendMoney / 7);
+    return (
+      <>
+        <div className="z">
+          $ {Math.floor((Number(user.spendMoney) / 7 / 24) * hours)}/ Day
+        </div>
+        <div className="z ">$ 0/ Week</div>
+        <div className="z">$ 0/ Month</div>
+        <div className="z">$ 0/ Year</div>
+      </>
+    );
   };
 
   const getWeek = () => {
-    return Math.floor(user.spendMoney);
+    return (
+      <>
+        <div className="z">
+          $ {Math.floor(Number(user.spendMoney) / 7)}/ Day
+        </div>
+        <div className="z ">
+          $ {Math.floor(Number(user.spendMoney))}/ Week
+          <div className="z">$ 0/ Month</div>
+          <div className="z">$ 0/ Year</div>
+        </div>
+      </>
+    );
   };
-
   const getMonth = () => {
-    return Math.floor(user.spendMoney * 4);
+    return (
+      <>
+        <div className="z">
+          $ {Math.floor(Number(user.spendMoney) / 7)}/ Day
+        </div>
+        <div className="z ">$ {Math.floor(Number(user.spendMoney))}/ Week</div>
+        <div className="z ">
+          $ {Math.floor(Number(user.spendMoney) * 4)}/ Month
+          <div className="z">$ 0/ Year</div>
+        </div>
+      </>
+    );
   };
 
   const getYear = () => {
-    return Math.floor(user.spendMoney * 52);
+    return (
+      <>
+        <div className="z">
+          $ {Math.floor(Number(user.spendMoney) / 7 / 24) * (hours % 24)}/ Day
+        </div>
+        <div className="z ">
+          $ {Math.floor(Number(user.spendMoney) / 7 / 24) * (hours % 168)}/ Week
+        </div>
+        <div className="z ">
+          $ {Math.floor(Number(user.spendMoney) / 7 / 24) * (hours % 720)}/
+          Month
+        </div>
+        <div className="z ">
+          $ {Math.floor(Number(user.spendMoney) * 52)}/ Year
+        </div>
+        ;
+      </>
+    );
   };
 
   const clickHandler = () => {
@@ -39,6 +92,17 @@ export default function MoneySaved({ getWeeklyMoneySaved, setIsMoneySaved }) {
 
   const goBack = () => {
     setIsMoneySaved(false);
+  };
+  const checkHours = (hours) => {
+    if (hours < 24) {
+      return getDay();
+    } else if (hours < 168) {
+      return getWeek();
+    } else if (hours < 720) {
+      return getMonth();
+    } else {
+      return getYear();
+    }
   };
 
   if (isClicked) {
@@ -61,11 +125,13 @@ export default function MoneySaved({ getWeeklyMoneySaved, setIsMoneySaved }) {
         </div>
         <img className="moneyIcon" src={iconMoneyBig} alt="smoke-free" />
         <div className="getWeekly">${getWeeklyMoneySaved()}</div>
+
         <div className="date">
-          <div className="z">$ {getDay()}/ Day</div>
-          <div className="z ">$ {getWeek()}/ Week</div>
-          <div className="z">$ {getMonth()}/ Month</div>
-          <div className="z">$ {getYear()}/ Year</div>
+          {checkHours(hours)}
+          {/* <div className="z">$ {getDay()}/ Day</div> */}
+          {/* <div className="z ">$ {getWeeklyMoneySaved()}/ Week</div> */}
+          {/* <div className="z">$ {getMonth()}/ Month</div>
+          <div className="z">$ {getYear()}/ Year</div> */}
         </div>
         <MyButton text="More" onClick={clickHandler} />
       </div>
