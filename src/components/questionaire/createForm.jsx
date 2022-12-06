@@ -12,6 +12,7 @@ const CreateForm = () => {
     lastTimeVape: "",
     spendMoney: "",
     eCigaretteSaved: 1,
+    isSubmit: false,
   });
   const data = localStorage.getItem("user");
 
@@ -21,7 +22,6 @@ const CreateForm = () => {
   const prevStep = () => {
     setForm({ ...form, step: form.step - 1 });
   };
-  const handleSubmit = () => {};
   const renderSwitch = step => {
     switch (step) {
       case 1:
@@ -40,7 +40,6 @@ const CreateForm = () => {
       case 3:
         return (
           <Calendar
-            nextStep={handleSubmit}
             isSubmit={true}
             prevStep={prevStep}
             form={form}
@@ -52,7 +51,7 @@ const CreateForm = () => {
         <NameForm nextStep={nextStep} />;
     }
   };
-  if (data) {
+  if (form.isSubmit) {
     return (
       <>
         <Home />
