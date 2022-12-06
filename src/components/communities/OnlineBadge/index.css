@@ -1,0 +1,17 @@
+div.online-badge {
+    background: #81CBAC;
+    border-radius: 200px;
+}
+
+div.online-badge.s {
+    height: 14px;
+    width: 14px;
+}
+div.online-badge.m {
+    height: 18px;
+    width: 18px;
+}
+div.online-badge.l {
+    height: 25px;
+    width: 25px;
+}

@@ -1,0 +1,47 @@
+header.communities {
+    position: fixed;
+    width: 100vw;
+    top: 15vw;
+    z-index: 1;
+}
+
+h1.communities-page-title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 9vw;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    /* The padding-left is because I feel like it's not center */
+    padding-left: 10px;
+}
+h1.communities-page-title span {
+    backdrop-filter: blur(6px);
+}
+
+@media only screen and (min-width: 600px) {
+    header.communities {
+        top: 8vw;
+    }
+
+    h1.communities-page-title {
+        font-size: 6vw;
+    }
+}
+
+main.communities-bubble-container {
+    margin-top: 40vw;
+    width: 120vw;
+    margin-left: -5vw;
+    overflow: hidden;
+
+    /*display: grid;*/
+    /*gap: 2px;*/
+    /*grid-template-columns: repeat(2, minmax(max-content, max-content));*/
+    /*grid-auto-flow: dense;*/
+
+    display: flex;
+    flex-wrap: wrap;
+}

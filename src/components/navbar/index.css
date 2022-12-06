@@ -6,9 +6,6 @@ nav.bottom-navbar {
     background-color: #81CBAC;
     color: white;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 nav.bottom-navbar ul li {
