@@ -1,25 +1,35 @@
-footer {
+nav.bottom-navbar {
     position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #81CBAC;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.navButton {
+nav.bottom-navbar ul li {
+    list-style-type: none;
+}
+
+nav.bottom-navbar .navButton {
     height: 5vh;
 }
 
-.user {
+nav.bottom-navbar .user {
     opacity: 0.55;
 }
 
-ul {
+nav.bottom-navbar ul {
+    margin: 2vw;
+    padding: 0;
     display: flex;
-    justify-content: space-around;
+    flex: 1;
+    align-self: center;
     align-items: center;
-
+    justify-content: space-around;
 }
 
