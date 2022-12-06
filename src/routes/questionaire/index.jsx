@@ -1,14 +1,16 @@
 import { useState } from "preact/hooks";
+import useLocalStorage from "use-local-storage";
 import MyButton from "../../components/button";
 import CreateForm from "../../components/questionaire/createForm";
 import "./index.css";
 
 export default function Questionnaire() {
+  const data = localStorage.getItem("user");
   const [isClicked, setIsClicked] = useState(false);
   const clickHandler = () => {
     setIsClicked(!isClicked);
   };
-  if (isClicked) {
+  if (isClicked && !data?.isSubmit) {
     return <CreateForm />;
   }
   return (
