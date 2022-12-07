@@ -1,7 +1,8 @@
 import MyButton from "../button";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "preact/hooks";
-import useLocalStorage from "use-local-storage";
+import MyInput from "../input";
+import DisplayBar from "../displayBar";
 
 const Calendar = ({ prevStep, question, form, setForm }) => {
   const calendarRef = useRef();
@@ -19,28 +20,32 @@ const Calendar = ({ prevStep, question, form, setForm }) => {
       calendarRef.current.style.border = "2px solid red";
       return;
     }
-    return setForm({ ...form, isSubmit: true });
-    // navigate("/home");
+    setForm({ ...form, isSubmit: true });
+    return navigate("/home");
   };
 
   const changeHandler = e => {
     setForm({ ...form, lastTimeVape: e.target.value });
   };
   return (
-    <div className="calendar">
+    <>
+      <DisplayBar name="About you" />
       <form onSubmit={submitHandler}>
-        <label htmlFor="calendar">{question}</label>
-        <input
-          id="calendar"
-          type="date"
-          ref={calendarRef}
-          value={form.lastTimeVape}
-          onChange={changeHandler}
-        />
-        <MyButton text="Prev" onClick={prevHandler} />
-        <MyButton text="Submit" />
+        <div className="form-div">
+          <span className="first-span">{question}</span>
+          <MyInput
+            type="date"
+            ref={calendarRef}
+            value={form.lastTimeVape}
+            onChange={changeHandler}
+          />
+          <div>
+            <MyButton text="Prev" type="bottom" onClick={prevHandler} />
+            <MyButton type="bottom" text="Submit" />
+          </div>
+        </div>
       </form>
-    </div>
+    </>
   );
 };
 export default Calendar;

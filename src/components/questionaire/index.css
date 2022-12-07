@@ -1,7 +1,39 @@
-.nameFrom-div {
+.form-div {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+}
+.first-span{
+    margin-top: 40px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333333;
+}
+.name-input{
+    width: 50%;
+    height: 2rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.second-span{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 100px;
+    margin-bottom: 1rem;
+    color: #333333;
+}
+.age-input{
+    width: 50%;
+    height: 2rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
 }

@@ -1,4 +1,7 @@
 import MyButton from "../button";
+import MyInput from "../input";
+import DisplayBar from "../displayBar";
+import "./index.css";
 
 const Spend = ({ nextStep, prevStep, question1, question2, form, setForm }) => {
   const prevHandler = () => {
@@ -14,24 +17,28 @@ const Spend = ({ nextStep, prevStep, question1, question2, form, setForm }) => {
     setForm({ ...form, eCigaretteSaved: e.target.value });
   };
   return (
-    <div className="spend">
-      <label htmlFor="spend">{question1}</label>
-      <input
-        id="spend"
-        type="number"
-        value={form.spendMoney}
-        onChange={changeHandler}
-      />
-      <label htmlFor="spendEpod">{question2}</label>
-      <input
-        id="spend"
-        type="number"
-        value={form.eCigaretteSaved}
-        onChange={ePodChnageHandler}
-      />
-      <MyButton text="Prev" onClick={prevHandler} />
-      <MyButton text="Next" onClick={clickHandler} />
-    </div>
+    <>
+      <DisplayBar name="About you" />
+      <div className="form-div">
+        <span className="first-span">{question1}</span>
+        <MyInput
+          type="number"
+          value={form.spendMoney}
+          onChange={changeHandler}
+        />
+
+        <span className="second-span">{question2}</span>
+        <MyInput
+          type="number"
+          value={form.eCigaretteSaved}
+          onChange={ePodChnageHandler}
+        />
+        <div className="btn-div">
+          <MyButton text="Prev" type="bottom" onClick={prevHandler} />
+          <MyButton text="Next" type="bottom" onClick={clickHandler} />
+        </div>
+      </div>
+    </>
   );
 };
 export default Spend;

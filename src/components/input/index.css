@@ -1,0 +1,12 @@
+.My-input {
+    width: 16rem;
+    height: 4rem;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #81CBAC;
+    background-color: #E3F4ED;
+    margin-top: 30px;
+}
