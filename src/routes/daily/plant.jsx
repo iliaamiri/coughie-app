@@ -11,7 +11,7 @@ const Plant = () => (
       </span></div>
   <div >
     <div>
-    <h2>Day 1</h2>
+    <h2 className={'daily-checkin-title'}>Day 1</h2>
    
       <img id="plantProgress" src="/assets/SVG/plantProgress.svg" alt="" />
       </div>

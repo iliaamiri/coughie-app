@@ -30,7 +30,7 @@
     padding-left: 10px;
 }
 
-h2 {
+h2.daily-checkin-title {
     z-index: 1;
     position: absolute;
     top: 50%;
