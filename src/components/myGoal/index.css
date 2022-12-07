@@ -31,3 +31,41 @@
   margin: 3rem;
   padding-top: 0.9rem;
 }
+
+.fullBar {
+  background-color: #81cbac;
+  height: 0.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.fiftyBar {
+  background-color: #81cbac;
+  height: 0.5rem;
+  width: 50%;
+  border-radius: 0.5rem;
+}
+.twentyFiveBar {
+  background-color: #81cbac;
+  height: 0.5rem;
+  width: 25%;
+  border-radius: 0.5rem;
+}
+.eightyBar {
+  background-color: #81cbac;
+  height: 0.5rem;
+  width: 80%;
+  border-radius: 0.5rem;
+}
+
+.barPercentage {
+  margin-bottom: 0.9rem;
+}
+
+.percentage {
+  margin-top: 0.3rem;
+}
+.percentageDiv {
+  word-spacing: 0.5em;
+  width: 40%;
+}

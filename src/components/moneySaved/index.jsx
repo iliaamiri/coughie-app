@@ -43,7 +43,7 @@ export default function MoneySaved({
           $ {Math.floor(Number(user.spendMoney) / 7)}/ Day
         </div>
         <div className="z ">
-          $ {Math.floor(Number(user.spendMoney))}/ Week
+          $ {Math.floor(user.spendMoney)}/ Week
           <div className="z">$ 0/ Month</div>
           <div className="z">$ 0/ Year</div>
         </div>
@@ -81,7 +81,6 @@ export default function MoneySaved({
         <div className="z ">
           $ {Math.floor(Number(user.spendMoney) * 52)}/ Year
         </div>
-        ;
       </>
     );
   };
@@ -94,11 +93,11 @@ export default function MoneySaved({
     setIsMoneySaved(false);
   };
   const checkHours = (hours) => {
-    if (hours < 24) {
+    if (hours < 168) {
       return getDay();
-    } else if (hours < 168) {
-      return getWeek();
     } else if (hours < 720) {
+      return getWeek();
+    } else if (hours < 8760) {
       return getMonth();
     } else {
       return getYear();

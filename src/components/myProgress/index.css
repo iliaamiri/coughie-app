@@ -17,7 +17,6 @@
   padding-top: 2rem;
 } */
 
-
 .icon {
   width: 22px;
   height: 22px;
@@ -32,6 +31,10 @@ img.icon {
   margin: 0;
   padding: auto;
   cursor: pointer;
+}
+
+.letter {
+  font-weight: bold;
 }
 
 .eCigarette {

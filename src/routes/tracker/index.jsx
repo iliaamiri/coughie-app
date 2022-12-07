@@ -33,13 +33,16 @@ const Tracker = () => {
     setHours(getDifferenceInHours(newDate, oldDate));
   }, []);
   const getWeeklyMoneySaved = () => {
+    if (!hours){
+      return 0;
+    }
     return Math.floor((user.spendMoney / 7 / 24) * hours);
   };
 
   return (
     <div>
       <DisplayBar name="My progress" />
-      <DisplayInput />
+    
       {!isMoneySaved ? (
         <MyProgress
           clickHandler={clickHandler}
