@@ -10,6 +10,7 @@ import Navbar from "./components/navbar";
 import Questionnaire from "./routes/questionaire";
 import Profile from "./routes/user";
 import "./app.css";
+import {Chat} from "./routes/communities/chat/index.jsx";
 
 export function App() {
   return (
@@ -25,6 +26,7 @@ export function App() {
           <Route path="/achievement" element={<Achievement />} />
           <Route path="/tracker" element={<Tracker />} />
           <Route path="/communities" element={<Communities />} />
+          <Route path="/communities/chat/:chatroomId" element={<Chat />} />
           <Route path="/user" element={<Profile />} />
         </Routes>
       </BrowserRouter>

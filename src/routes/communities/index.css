@@ -36,6 +36,7 @@ main.communities-bubble-container {
     width: 120vw;
     margin-left: -5vw;
     overflow: hidden;
+    padding: 0 0 6em 0;
 
     /*display: grid;*/
     /*gap: 2px;*/

@@ -1,0 +1,22 @@
+div.member-item {
+    border-radius: 1000px 250px 250px 1000px;
+    margin: 0 4px 6px 0;
+    padding-right: 10px;
+    background-color: #81CBAC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+div.member-item .avatar {
+    max-height: 10vw;
+    border-radius: 1000px;
+    padding: 3px 6px 3px 5px;
+}
+
+div.member-item div {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
