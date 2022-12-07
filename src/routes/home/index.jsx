@@ -28,7 +28,7 @@ const Home = () => {
       <div className="homeMenu">
         <div>
           <div>
-            <Link href="/achievement">
+            <Link href="/tracker">
               <img src="/assets/SVG/trophy.svg" alt="" />
             </Link>
           </div>
