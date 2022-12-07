@@ -106,12 +106,12 @@ export default function MoneySaved({
 
   if (isClicked) {
     return (
-      <>
+      <div className="myGoal-div">
         <MyGoal
           setIsClicked={setIsClicked}
           getWeeklyMoneySaved={getWeeklyMoneySaved}
         />
-      </>
+      </div>
     );
   } else {
     return (

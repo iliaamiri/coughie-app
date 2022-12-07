@@ -3,6 +3,7 @@ import MyProgress from "../../components/myProgress";
 import DisplayInput from "../../components/displayInput";
 import MoneySaved from "../../components/moneySaved";
 import { useState, useEffect } from "preact/hooks";
+import "./index.css"
 
 const Tracker = () => {
   const data = localStorage.getItem("user");
@@ -40,7 +41,7 @@ const Tracker = () => {
   };
 
   return (
-    <div>
+    <div className="tracker-div">
       <DisplayBar name="My progress" />
     
       {!isMoneySaved ? (
