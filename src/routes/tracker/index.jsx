@@ -1,6 +1,5 @@
 import DisplayBar from "../../components/displayBar";
 import MyProgress from "../../components/myProgress";
-import DisplayInput from "../../components/displayInput";
 import MoneySaved from "../../components/moneySaved";
 import { useState, useEffect } from "preact/hooks";
 import "./index.css"
