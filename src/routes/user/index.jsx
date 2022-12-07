@@ -1,4 +1,9 @@
 import { useState } from "preact/hooks";
+import ImageEditor from "../../components/profile/imageEditor";
+import DisplayBar from "../../components/displayBar";
+import ProfileEditor from "../../components/profile/profileEditor";
+import FormEditor from "../../components/profile/formEditor";
+
 const Profile = () => {
   const data = localStorage.getItem("user");
   const [user, setUser] = useState(
@@ -10,13 +15,20 @@ const Profile = () => {
       eCigaretteSaved: 1,
     }
   );
-  console.log(user);
+  const [isEdit, setIsEdit] = useState(false);
 
   return (
-    <div>
-      <h1>Profile</h1>
-      <div>
-        <img src="/assets/profile.png" alt="user profile" />
+    <div className="profile">
+      <DisplayBar name="My profile" />
+      <div className="profile-div">
+        {!isEdit ? (
+          <ImageEditor setIsEdit={setIsEdit} />
+        ) : (
+          <>
+            <ProfileEditor />
+            <FormEditor setIsEdit={setIsEdit} />
+          </>
+        )}
       </div>
     </div>
   );

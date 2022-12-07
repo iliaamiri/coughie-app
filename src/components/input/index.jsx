@@ -1,11 +1,18 @@
 import "./index.css";
-const MyInput = ({ type, name, value, onChange, placeholder }) => {
+const MyInput = ({
+  type,
+  name,
+  value,
+  onChange,
+  placeholder,
+  className = "My-input",
+}) => {
   return (
     <>
       <input
         type={type}
         name={name}
-        className="My-input"
+        className={className}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
