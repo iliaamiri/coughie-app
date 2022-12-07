@@ -1,0 +1,22 @@
+img {
+    max-height: 115px;
+    max-width: 85px;
+    margin: 20px 30px ;
+}
+
+.wrapper {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 20px;
+    border-radius: 10px;
+    color: #4CB78A ;
+    border-color: #4CB78A;
+   
+}
+
+.text {
+    padding-right: 20px;
+
+}
