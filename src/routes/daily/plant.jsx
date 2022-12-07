@@ -13,7 +13,7 @@ const Plant = () => (
     <div>
     <h2 className={'daily-checkin-title'}>Day 1</h2>
    
-      <img id="plantProgress" src="/assets/SVG/plantProgress.svg" alt="" />
+      <img id="plantProgress" src="src/assets/SVG/plantProgress.svg" alt="" />
       </div>
       </div>
   </div>

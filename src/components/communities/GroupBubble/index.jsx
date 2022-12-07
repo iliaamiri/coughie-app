@@ -10,7 +10,7 @@ export function GroupBubble({ size = "large", isAnimated = false }) {
                 <h2>Raving over Vaping</h2>
                 <div className={'meta-info'}>
                     <div className={'flex flex-row align-items-center'}>
-                        <img src="/assets/SVG/user-icon.svg" alt=""/>
+                        <img src="src/assets/SVG/user-icon.svg" alt=""/>
                         <span>20</span>
                     </div>
                     <div className={'flex flex-row align-items-center'}>
