@@ -1,11 +1,11 @@
 nav.bottom-navbar {
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #81CBAC;
+    background-color:#81CBAC;
     color: white;
     text-align: center;
+    height: 60px;
 }
 
 nav.bottom-navbar ul li {
@@ -13,7 +13,10 @@ nav.bottom-navbar ul li {
 }
 
 nav.bottom-navbar .navButton {
-    height: 5vh;
+    height: 40px;
+    /* padding: 0; */
+    
+    margin: 10px 0 0 0 ;
 }
 
 nav.bottom-navbar .user {
@@ -21,10 +24,9 @@ nav.bottom-navbar .user {
 }
 
 nav.bottom-navbar ul {
-    margin: 2vw;
+    /* margin: 2vw; */
     padding: 0;
     display: flex;
-    flex: 1;
     align-self: center;
     align-items: center;
     justify-content: space-around;
