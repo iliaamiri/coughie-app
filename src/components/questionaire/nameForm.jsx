@@ -1,5 +1,6 @@
-import { useState } from "preact/hooks";
 import MyButton from "../button";
+import MyInput from "../input";
+import DisplayBar from "../displayBar";
 import "./index.css";
 
 const NameForm = ({ nextStep, form, setForm }) => {
@@ -13,27 +14,28 @@ const NameForm = ({ nextStep, form, setForm }) => {
     setForm({ ...form, age: e.target.value });
   };
   return (
-    <div className="nameFrom-div">
-      <label>
-        What is Your name?
-        <input
+    <>
+      <DisplayBar name="About you" />
+      <div className="form-div">
+        <span className="first-span">What is Your name?</span>
+        <MyInput
           type="text"
-          name="name"
+          name="uname"
+          className="name-input"
           value={form.uname}
           onChange={changeHandler}
         />
-      </label>
-      <label>
-        What is your age?
-        <input
+        <span className="second-span">What is your age?</span>
+        <MyInput
           type="number"
           name="age"
+          className="age-input"
           value={form.age}
           onChange={ageHandler}
         />
-      </label>
-      <MyButton text="next" onClick={clickHandler} />
-    </div>
+        <MyButton text="next" type="bottom" onClick={clickHandler} />
+      </div>
+    </>
   );
 };
 

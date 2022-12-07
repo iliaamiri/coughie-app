@@ -7,10 +7,10 @@ import Spend from "./spend";
 const CreateForm = () => {
   const [form, setForm] = useLocalStorage("user", {
     step: 1,
-    uname: "",
-    age: "",
+    uname: "name",
+    age: 20,
     lastTimeVape: "",
-    spendMoney: "",
+    spendMoney: 100,
     eCigaretteSaved: 1,
     isSubmit: false,
   });
