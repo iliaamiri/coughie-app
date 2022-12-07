@@ -17,7 +17,7 @@ export default function Questionnaire() {
     <div className="questionaire">
       <div>
         <div>
-          <img src="../../../public/assets/main.png" alt="main" />
+          <img src="/src/assets/main.png" alt="main" />
         </div>
         <h1>Coughie</h1>
         <p>"the secret to getting ahead is getting started"</p>

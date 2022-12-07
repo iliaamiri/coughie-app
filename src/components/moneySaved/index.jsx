@@ -1,7 +1,7 @@
 import { useState } from "preact/hooks";
 import "./index.css";
-import iconMoneyBig from "../../../public/assets/icon_money_big.png";
-import backBtn from "../../../public/assets/back_btn.png";
+import iconMoneyBig from "/src/assets/icon_money_big.png";
+import backBtn from "/src/assets/back_btn.png";
 import MyButton from "../button";
 import MyGoal from "../myGoal";
 
