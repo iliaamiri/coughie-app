@@ -14,7 +14,7 @@ export default function Questionnaire() {
     return <CreateForm />;
   }
   return (
-    <div className="questionaire">
+    <div className="questionnaire">
       <div>
         <div>
           <img src="/src/assets/main.png" alt="main" />
