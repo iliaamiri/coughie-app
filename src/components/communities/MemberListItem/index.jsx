@@ -2,7 +2,7 @@ import "./index.css";
 
 const sampleMember = {
     name: "Megan",
-    avatar: "/assets/profileAvatars/atikh-bana-_KaMTEmJnxY-unsplash.jpg",
+    avatar: "src/assets/profileAvatars/atikh-bana-_KaMTEmJnxY-unsplash.jpg",
     o2: 10000,
 }
 

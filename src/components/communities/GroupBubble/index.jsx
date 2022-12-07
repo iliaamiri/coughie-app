@@ -1,8 +1,11 @@
 import "./index.css";
 import {OnlineBadge} from "../OnlineBadge";
 import {Button} from "../Buttons/index.jsx";
+import {useContext} from "preact/hooks";
+import {UserActionsContext} from "../../../lib/contexts.js";
 
-export function GroupBubble({ size = "large", isAnimated = false }) {
+export function GroupBubble({ groupId, size = "large", isAnimated = false }) {
+    const { onJoin, onView } = useContext(UserActionsContext);
 
     return(
         <div className={`group-bubble ${size} ${isAnimated ? 'animate' : ''}`}>
@@ -19,8 +22,8 @@ export function GroupBubble({ size = "large", isAnimated = false }) {
                     </div>
                 </div>
                 <div className={'action-buttons-container'}>
-                    <Button type={`secondary ${size}`}>View</Button>
-                    <Button type={`primary ${size}`}>Join</Button>
+                    <Button type={`secondary`} size={size} onClick={() => onView({groupId})}>View</Button>
+                    <Button type={`primary`} size={size} onClick={() => onJoin({groupId})}>Join</Button>
                 </div>
             </div>
         </div>

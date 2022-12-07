@@ -3,9 +3,10 @@ import {SearchBar} from "../../components/communities/SearchBar/index.jsx";
 import {GroupBubble} from "../../components/communities/GroupBubble/index.jsx";
 import {useEffect, useState} from "preact/hooks";
 import {GroupBubbleModal} from "../../components/communities/GroupBubbleModal";
+import {UserActionsContext} from "../../lib/contexts";
 
 const Communities = () => {
-    const [currentOpenGroupId, setCurrentOpenGroupId] = useState("some-id");
+    const [currentOpenGroupId, setCurrentOpenGroupId] = useState(null);
 
     const [communitiesList, setCommunitiesList] = useState(null);
 
@@ -35,7 +36,11 @@ const Communities = () => {
 
     const handleJoinChatRoom = ({ groupId }) => {
         console.log(`Joining Group Chat #${groupId}`)
-    }
+    };
+    const handleViewChatRoom = ({ groupId }) => {
+        console.log(`Viewing Group Chat #${groupId}`)
+        setCurrentOpenGroupId(groupId);
+    };
 
     return (
         <>
@@ -45,17 +50,21 @@ const Communities = () => {
                 <SearchBar isShown={shouldSearchBarAppear} onSearchSubmit={handleSearchSubmit} onSearchBarChange={handleSearchBarChange}/>
             </header>
             <main className={'communities-bubble-container'}>
-                <GroupBubble size={'large'} isAnimated={true} />
-                <GroupBubble size={'small'} />
-                <GroupBubble size={'small'} isAnimated={true} />
-                <GroupBubble size={'large'} />
-                <GroupBubble size={'medium'} isAnimated={true} />
-                <GroupBubble size={'medium'} />
-                <GroupBubble size={'medium'} isAnimated={true} />
-                <GroupBubble size={'small'} isAnimated={true} />
-                <GroupBubble size={'small'} isAnimated={true} />
-                <GroupBubble size={'small'} isAnimated={true} />
-                <GroupBubble size={'small'} isAnimated={true} />
+                <UserActionsContext.Provider value={{
+                    onJoin: handleJoinChatRoom, onView: handleViewChatRoom
+                }}>
+                    <GroupBubble groupId={"ascrk"} size={'large'} isAnimated={true} />
+                    <GroupBubble groupId={"asdasdfg"} size={'small'} />
+                    <GroupBubble groupId={"friekdl"} size={'small'} isAnimated={true} />
+                    <GroupBubble groupId={"dapofj03dklsj"} size={'large'} />
+                    <GroupBubble groupId={"fklasd"} size={'medium'} isAnimated={true} />
+                    <GroupBubble size={'medium'} />
+                    <GroupBubble size={'medium'} isAnimated={true} />
+                    <GroupBubble size={'small'} isAnimated={true} />
+                    <GroupBubble size={'small'} isAnimated={true} />
+                    <GroupBubble size={'small'} isAnimated={true} />
+                    <GroupBubble size={'small'} isAnimated={true} />
+                </UserActionsContext.Provider>
             </main>
         </>
     );
