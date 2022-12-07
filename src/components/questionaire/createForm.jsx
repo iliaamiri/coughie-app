@@ -13,6 +13,7 @@ const CreateForm = () => {
     spendMoney: 100,
     eCigaretteSaved: 1,
     isSubmit: false,
+    imageUrl: "../assets/profile.png",
   });
   const data = localStorage.getItem("user");
 
