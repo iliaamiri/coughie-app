@@ -45,7 +45,7 @@ const ImageEditor = ({ setIsEdit }) => {
         <img
           className="image-editor"
           src={user?.imageUrl ? user.imageUrl : "../assets/profile.png"}
-          alt="Profile"
+          alt=""
         />
       )}
       <div className="btn-div">

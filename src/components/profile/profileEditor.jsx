@@ -41,7 +41,7 @@ const ProfileEditor = () => {
         <img
           className="profile-editor"
           src={user?.imageUrl ? user.imageUrl : "../assets/profile.png"}
-          alt="Profile"
+          alt=""
           onClick={() => fileInputRef.current.click()}
         />
       )}
