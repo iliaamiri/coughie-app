@@ -1,9 +1,21 @@
-import { h } from "preact";
+import DisplayBar from "../../components/displayBar";
+import "./index.css";
 
 const Plant = () => (
   <div>
-    <h1>Plant</h1>
-    <p>This is the Plant component.</p>
+    <DisplayBar name="Plant Progress"></DisplayBar>
+    <div className="oxygenLevels">
+      <img src="/assets/coca-leaves.png" alt="" />
+      <span>
+      10 O2
+      </span></div>
+  <div >
+    <div>
+    <h2>Day 1</h2>
+   
+      <img id="plantProgress" src="/assets/SVG/plantProgress.svg" alt="" />
+      </div>
+      </div>
   </div>
 );
 
