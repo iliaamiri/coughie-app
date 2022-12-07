@@ -1,7 +1,7 @@
 import "./index.css";
-import smokeFree from "../../../public/assets/smokeFree.png";
-import iconMoney from "../../../public/assets/icon-money.png";
-import noSmoke from "../../../public/assets/nosmoke-icon.png";
+import smokeFree from "/src/assets/smokeFree.png";
+import iconMoney from "/src/assets/icon-money.png";
+import noSmoke from "/src/assets/nosmoke-icon.png";
 import DisplayInput from "../displayInput";
 import { useState } from "preact/hooks";
 

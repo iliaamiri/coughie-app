@@ -1,0 +1,108 @@
+div.group-bubble-modal-backdrop {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    backdrop-filter: blur(4px);
+}
+
+div.group-bubble-modal {
+    position: absolute;
+    top: 20vh;
+    left: 5vw;
+    width: 90%;
+    height: 60vh;
+    background-color: #E5F4FA;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.group-bubble-modal div.group-bubble-modal-wrapper {
+    width: 75vw;
+}
+
+div.group-bubble-modal div.modal-header {
+    display: flex;
+    width: 75vw;
+    margin-top: 3vh;
+    justify-content: space-between;
+    align-items: center;
+}
+div.group-bubble-modal div.modal-header h3.modal-title {
+    padding: 0;
+    font-size: 4vh;
+    font-family: "Source Sans Pro", sans-serif;
+    letter-spacing: 0.2em;
+    font-weight: 1000;
+}
+
+div.modal-description-container {
+    align-self: flex-start;
+}
+div.modal-description-container .description-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+div.modal-description-container .description-section span {
+    font-size: 4vw;
+    color: #81CBAC;
+    font-family: 'Lato', sans-serif;
+    line-height: 13px;
+}
+div.modal-description-container .description-section p {
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    line-height: 20px;
+}
+
+
+div.modal-member-list-container {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+div.modal-member-list-container .meta-info-bar {
+    display: flex;
+    flex-direction: row;
+    background-color: #383838;
+    flex-shrink: 1;
+    border-radius: 1000px;
+    color: white;
+    gap: 15px;
+    padding: 2px 15px 2px 15px;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+div.modal-member-list-container div.member-list {
+    width: 100%;
+    overflow-y: scroll;
+
+    scrollbar-width: 9px;          /* "auto" or "thin" */
+    scrollbar-color: #333333 #CCEBF6;
+}
+div.modal-member-list-container div.member-list::-webkit-scrollbar {
+    width: 9px;
+}
+/* Track */
+div.modal-member-list-container div.member-list::-webkit-scrollbar-track {
+    background: #CCEBF6;
+    border-radius: 1000px;
+}
+/* Handle */
+div.modal-member-list-container div.member-list::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 1000px;
+}
+
+
+div.modal-action-buttons-container {
+    display: flex;
+    gap: 10px;
+}
