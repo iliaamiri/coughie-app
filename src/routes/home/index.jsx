@@ -28,7 +28,7 @@ const Home = () => {
       <div className="homeMenu">
         <div>
           <div>
-            <Link href="/tracker">
+            <Link href="/achievement">
               <img src="/assets/SVG/trophy.svg" alt="" />
             </Link>
           </div>
@@ -52,7 +52,7 @@ const Home = () => {
         </div>
         <div>
           <div>
-            <Link href="/daily/checkin">
+            <Link href="/tracker">
               <img id="check" src="/assets/check.png" alt="" />
             </Link>
           </div>
