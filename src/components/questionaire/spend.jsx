@@ -17,7 +17,7 @@ const Spend = ({ nextStep, prevStep, question1, question2, form, setForm }) => {
     setForm({ ...form, eCigaretteSaved: e.target.value });
   };
   return (
-    <>
+    <div className="spend">
       <DisplayBar name="About you" />
       <div className="form-div">
         <span className="first-span">{question1}</span>
@@ -26,7 +26,6 @@ const Spend = ({ nextStep, prevStep, question1, question2, form, setForm }) => {
           value={form.spendMoney}
           onChange={changeHandler}
         />
-
         <span className="second-span">{question2}</span>
         <MyInput
           type="number"
@@ -38,7 +37,7 @@ const Spend = ({ nextStep, prevStep, question1, question2, form, setForm }) => {
           <MyButton text="Next" type="bottom" onClick={clickHandler} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Spend;
