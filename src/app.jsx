@@ -36,7 +36,7 @@ export function App() {
         </Routes>
       </BrowserRouter>
 
-      <Navbar></Navbar>
+      { !location.href.includes("/communities/chat") && <Navbar /> }
     </>
   );
 }

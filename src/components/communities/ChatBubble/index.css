@@ -1,0 +1,64 @@
+div.chatbubble-container {
+    display: flex;
+    gap: 8px;
+    width: 83.5%;
+    margin-bottom: 20px;
+    font-family: "Lato", sans-serif;
+}
+div.chatbubble-container.me {
+    flex-direction: row-reverse;
+    align-self: flex-end;
+}
+
+div.chatbubble-avatar img {
+    height: 5.6vh;
+    width: 5.6vh;
+    border-radius: 1000px;
+}
+
+div.chatbubble-bubble-container {
+    display: flex;
+    flex-direction: column;
+}
+div.chatbubble-container.me .chatbubble-bubble-container {
+    align-items: flex-end;
+}
+div.chatbubble-container.others .chatbubble-bubble-container {
+    align-items: flex-start;
+}
+
+div.chatbubble-bubble-container .bubble-footer {
+    display: flex;
+    padding: 0 10px 5px 10px;
+    font-weight: 550;
+}
+div.chatbubble-container.me .bubble-footer {
+    justify-content: flex-start;
+}
+div.chatbubble-container.others .bubble-footer {
+    justify-content: flex-end;
+}
+
+div.chatbubble-container.me .chatbubble-bubble-container > span {
+    opacity: 0;
+}
+
+
+div.chatbubble-bubble-box {
+    text-align: left;
+    background-color: #CCEBF6;
+    color: black;
+}
+div.chatbubble-bubble-box p {
+    color: black;
+    font-weight: 600;
+    padding: 10px 10px 0 10px;
+    margin-bottom: 0;
+}
+
+div.chatbubble-container.me div.chatbubble-bubble-box {
+    border-radius: 10px 0px 10px 10px;
+}
+div.chatbubble-container.others div.chatbubble-bubble-box {
+    border-radius: 0px 10px 10px 10px;
+}

@@ -3,6 +3,10 @@ div.online-badge {
     border-radius: 200px;
 }
 
+div.online-badge.xs {
+    height: 11px;
+    width: 11px;
+}
 div.online-badge.s {
     height: 14px;
     width: 14px;

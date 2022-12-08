@@ -4,6 +4,7 @@ import {GroupBubble} from "../../components/communities/GroupBubble/index.jsx";
 import {useEffect, useState} from "preact/hooks";
 import {GroupBubbleModal} from "../../components/communities/GroupBubbleModal";
 import {UserActionsContext} from "../../lib/contexts";
+import {Button} from "../../components/communities/Buttons/index.jsx";
 
 const Communities = () => {
     const [currentOpenGroupId, setCurrentOpenGroupId] = useState(null);
@@ -36,6 +37,7 @@ const Communities = () => {
 
     const handleJoinChatRoom = ({ groupId }) => {
         console.log(`Joining Group Chat #${groupId}`)
+        window.location.href = "/communities/chat/" + groupId;
     };
     const handleViewChatRoom = ({ groupId }) => {
         console.log(`Viewing Group Chat #${groupId}`)
@@ -64,6 +66,7 @@ const Communities = () => {
                     <GroupBubble size={'small'} isAnimated={true} />
                     <GroupBubble size={'small'} isAnimated={true} />
                     <GroupBubble size={'small'} isAnimated={true} />
+                    <Button customClassNames={'load-more-button'} type={"primary"} size={"x-large"}>Load More</Button>
                 </UserActionsContext.Provider>
             </main>
         </>

@@ -1,7 +1,7 @@
 import "./index.css";
 
-export function OnlineBadge() {
+export function OnlineBadge({ size = "s"}) {
     return (
-        <div className={'online-badge s'}></div>
+        <div className={`online-badge ${size}`}></div>
     );
 }

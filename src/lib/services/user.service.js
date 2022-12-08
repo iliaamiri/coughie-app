@@ -1,5 +1,7 @@
 import * as groupService from "./group.service.js";
 
+const STORAGE_KEY = "users";
+
 export function joinGroup({groupId}) {
     const user = getCurrentUserFromStorage();
     if (!user) throw new Error("User is not setup");
@@ -11,7 +13,7 @@ export function joinGroup({groupId}) {
 }
 
 export function findUsers() {
-    return JSON.parse(localStorage.getItem("users") || "[]");
+    return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
 }
 
 export function getUserById(userId) {
@@ -19,7 +21,7 @@ export function getUserById(userId) {
 }
 
 export function createUsers(users) {
-    localStorage.setItem("users", JSON.stringify([...findUsers(), users.map(u => ({ ...u, createdAt: Date.now(), updatedAt: Date.now() }))]));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify([...findUsers(), users.map(u => ({ ...u, createdAt: Date.now(), updatedAt: Date.now() }))]));
 }
 
 export function getCurrentUserFromStorage({}) {
