@@ -1,12 +1,13 @@
 import DisplayBar from "../../components/displayBar";
 import CheckinButtons from "../../components/checkinButtons";
-const Checkin = () => (
+const Hours = () => (
 
   <div>
     <DisplayBar name="Daily Check-In"></DisplayBar>
-   <CheckinButtons question="Did you vape today?" range={false} money={false}/>
+   <CheckinButtons question="How many hours were you vape free today?" range={true}/>
   </div>
 
 );
 
-export default Checkin;
+export default Hours;
+ 
