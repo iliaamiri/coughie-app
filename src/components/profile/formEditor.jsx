@@ -1,4 +1,3 @@
-import { useState } from "preact/hooks";
 import MyInput from "../input";
 import MyButton from "../button";
 import useLocalStorage from "use-local-storage";
