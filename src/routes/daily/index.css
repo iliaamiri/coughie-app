@@ -39,3 +39,16 @@ h2.daily-checkin-title {
     left: 42%;
     color:#888ca2;
 }
+
+p.plant-notif {
+    z-index: 1;
+    position: absolute;
+    top: 73.5%;
+    color: #3EB798;
+    width: 75vw;
+   font-size: 20px;
+   font-weight: 500;
+    padding: 3.5vw;
+    border-radius: 5px;
+    margin: 0 12.5vw;
+}
