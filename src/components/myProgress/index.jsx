@@ -36,7 +36,7 @@ export default function MyProgress({
 
   return (
     <>
-      <DisplayInput />
+      <DisplayInput user={user} />
       <div className="card">
         <div className="card-div">
           <img className="icon" src={smokeFree} alt="smoke-free" />
