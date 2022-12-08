@@ -1,11 +1,9 @@
 #plantProgress {
     margin: 0;
     position: absolute;
-    /* top: 600px; */
+  
     bottom: 300px;
     left: 65px;
-    /* transform: translate(-140px, 105px); */
-    /* height: 240px; */
     width: 280px;
     z-index: 0;
 }

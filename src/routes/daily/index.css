@@ -1,9 +1,7 @@
 
-
-
 .oxygenLevels img{
     height: 25px;
-    padding-bottom: 3px;
+    margin:  0 10px 5px 5px;
 }
 
 .oxygenLevels {
@@ -12,7 +10,7 @@
     border-radius: 5px;
     color: white;
     font-weight: 600;
-    width: 120px;
+    width: 135px;
     font-size: larger;
     right: 0;
     position:absolute;

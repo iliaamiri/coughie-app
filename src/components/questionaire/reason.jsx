@@ -15,6 +15,8 @@ const Reason = ({ isSubmit, prevStep, form, setForm, question }) => {
   const submitHandler = e => {
     e.preventDefault();
     setForm({ ...form, isSubmit: true });
+    localStorage.setItem("day", 1);
+    localStorage.setItem("Oxygen", 10);
     return navigate("/home");
   };
   return (
