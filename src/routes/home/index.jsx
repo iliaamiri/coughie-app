@@ -28,7 +28,7 @@ const Home = () => {
       <div className="homeMenu">
         <div>
           <div>
-            <Link href="/tracker">
+            <Link href="/achievement">
               <img src="/src/assets/SVG/trophy.svg" alt="" />
             </Link>
           </div>
@@ -36,11 +36,11 @@ const Home = () => {
         </div>
         <div>
           <div>
-            <Link href="/daily/plant">
-              <img src="/src/assets/SVG/plant.svg" alt="" />
+            <Link href="/tracker">
+              <img src="/src/assets/verified.png" alt="" />
             </Link>
           </div>
-          <p>plant progress</p>
+          <p>Self progress</p>
         </div>
         <div>
           <div>
@@ -56,13 +56,15 @@ const Home = () => {
               <img id="check" src="/src/assets/check.png" alt="" />
             </Link>
           </div>
-          <p>self progress</p>
+          <p>Daily Check-in</p>
         </div>
       </div>
 
       <RememberDialogue dialogue="I want to quit so I can use my money on more meaningful things"></RememberDialogue>
       <div>
+      <Link href="/daily/plant">
         <img id="plant" src="/src/assets/SVG/floweredPlant.svg" alt="" />
+        </Link>
       </div>
     </div>
   );
