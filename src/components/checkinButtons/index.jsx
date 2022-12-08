@@ -11,7 +11,7 @@ export default function checkinButtons({ question, range, money }) {
 
     function setLocalstorageNo() {
         localStorage.setItem("vapedToday?", "no");
-        navigate("/daily/hours");
+        navigate("/daily/moneySpent");
     }
 
     function setLocalstorageYes() {
@@ -23,6 +23,11 @@ export default function checkinButtons({ question, range, money }) {
         setMoneyDialogue(true);
     }
 
+    function moneyInputNo() {
+        localStorage.setItem("moneySpent?", 0);
+        navigate("/daily/plant");
+    }
+
     function vaped(hours) {
         localStorage.setItem("hoursWithoutVaping", hours);
         navigate("/daily/moneySpent");
@@ -30,7 +35,7 @@ export default function checkinButtons({ question, range, money }) {
 
     function moneySpentStorage() {
       localStorage.setItem("moneySpent?", moneySpent);
-      navigate("/home");
+      navigate("/daily/plant");
     }
 
     
@@ -50,7 +55,7 @@ export default function checkinButtons({ question, range, money }) {
                         </button>
                         <button
                             className="right"
-                            onClick={money ? moneyInput : setLocalstorageNo}
+                            onClick={money ? moneyInputNo : setLocalstorageNo}
                         >
                             No
                         </button>
@@ -80,7 +85,7 @@ export default function checkinButtons({ question, range, money }) {
             <div className="check-in-box">
                 <h3>How much?</h3>
                 <h3>$ &nbsp;
-                <input type="number" min="1" max="1000" value="0" onChange={(e) => setMoneySpent(e.target.value)}/>
+                <input type="number" min="1" max="1000" placeholder="0" onChange={(e) => setMoneySpent(e.target.value)}/>
                 </h3>
                 <MyButton text="SUBMIT" onClick={() => moneySpentStorage(hours)}></MyButton>
             </div>

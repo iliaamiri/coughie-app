@@ -4,7 +4,7 @@ const MoneySpent = () => (
 
   <div>
     <DisplayBar name="Daily Check-In"></DisplayBar>
-   <CheckinButtons question="Did you spend money to vape today?" range={false} money={true}/>
+   <CheckinButtons question="Did you spend money on vaping supplies today?" range={false} money={true}/>
   </div>
 
 );
