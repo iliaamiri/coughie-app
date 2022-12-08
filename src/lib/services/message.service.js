@@ -2,8 +2,10 @@ import * as groupService from "./group.service.js";
 import * as userService from "./user.service.js";
 import {generateUUID} from "../utils.js";
 
+const STORAGE_KEY = "messages";
+
 export function findAllMessages() {
-    return JSON.parse(localStorage.getItem("messages") ?? "[]");
+    return JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "[]");
 }
 
 export function createNewMessage({messageText, groupId, userId}) {
@@ -15,7 +17,7 @@ export function createNewMessage({messageText, groupId, userId}) {
         userId,
         createdAt: Date.now()
     };
-    localStorage.setItem("messages", JSON.stringify([...findAllMessages(), newMessage]));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify([...findAllMessages(), newMessage]));
     return uuid;
 }
 

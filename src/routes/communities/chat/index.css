@@ -1,0 +1,103 @@
+header.chat-header-container {
+    position: fixed;
+    background-color: #F5FAFF;
+    z-index: 10;
+    width: 100vw;
+    border-bottom: 1px solid black;
+    padding-top: 7vh;
+    padding-bottom: 0.5vh;
+}
+
+header div.top-navbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 4vw;
+}
+
+header div.top-navbar-container div.icon-placeholder {
+    width: 50px;
+}
+
+header div.top-navbar-container h2.group-title {
+    font-weight: 1000;
+    font-family: 'Source Sans Pro', 'Lato', sans-serif;
+}
+
+header div.top-navbar-container div.meta-info-top {
+    display: flex;
+    gap: 14px;
+    font-family: 'Lato', sans-serif;
+}
+
+header div.top-navbar-container div.meta-info-top span {
+    font-size: 13px;
+}
+
+
+
+main.chatroom-container {
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    z-index: 1;
+    padding-top: 16vh;
+    padding-bottom: 10vh;
+}
+
+
+
+/* Navbar */
+div.chat-nav-bar-container {
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    width: 100vw;
+    height: 8vh;
+    background-color: #81CBAC;
+}
+div.chat-nav-bar-container .chat-input-box {
+    width: 90vw;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.chat-nav-bar-container .chat-input-box input {
+    border-radius: 1000px;
+    background-color: #E5F4FA;
+    border: none;
+    padding: 10px 100px 10px 20px;
+    width: 100%;
+    font-family: "Source Sans Pro", "Lato", sans-serif;
+}
+div.chat-nav-bar-container .chat-input-box input:focus {
+    outline: none;
+}
+div.chat-nav-bar-container .chat-input-box input::placeholder {
+    color: #6F6F6F;
+}
+
+div.chat-nav-bar-container .chat-input-box .attachment-button {
+    z-index: 2;
+    position: absolute;
+    right: 48px;
+    width: 70px;
+    text-align: left;
+    background-color: #81CBAC;
+    border-radius: 1000px;
+    padding: 4px 10px;
+}
+div.chat-nav-bar-container .chat-input-box .send-button {
+    z-index: 3;
+    position: absolute;
+    right: 22px;
+    background-color: #49B695;
+    color: white;
+    border-radius: 1000px;
+    padding: 8px 15px;
+}

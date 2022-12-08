@@ -46,3 +46,9 @@ main.communities-bubble-container {
     display: flex;
     flex-wrap: wrap;
 }
+
+main.communities-bubble-container .load-more-button {
+    margin-top: 40px;
+    position: relative;
+    left: 24%;
+}

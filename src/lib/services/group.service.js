@@ -1,7 +1,9 @@
 import {generateUUID} from "../utils.js";
 
+const STORAGE_KEY = "groups";
+
 export function findAllGroups() {
-    return JSON.parse(localStorage.getItem("groups") || "[]");
+    return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
 }
 
 export function getGroupById({groupId}) {
@@ -10,7 +12,7 @@ export function getGroupById({groupId}) {
 
 export function createGroup({name, description, messagesIds, membersIds}) {
     const uuid = generateUUID();
-    localStorage.setItem("groups", JSON.stringify([...findAllGroups(), {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify([...findAllGroups(), {
         id: uuid,
         name,
         description,
@@ -22,10 +24,10 @@ export function createGroup({name, description, messagesIds, membersIds}) {
 }
 
 export function deleteGroupById({groupId}) {
-    localStorage.setItem("groups", JSON.stringify([...findAllGroups().filter(g => g.id !== groupId)]));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify([...findAllGroups().filter(g => g.id !== groupId)]));
 }
 
 // loop through each group and save their return value to localStorage instantly.
 export function mapSave(cb) {
-    localStorage.setItem("groups", JSON.stringify([...findAllGroups().map(cb)]));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify([...findAllGroups().map(cb)]));
 }

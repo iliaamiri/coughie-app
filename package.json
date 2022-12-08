@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@preact/signals": "^1.1.2",
+    "moment-timezone": "^0.5.39",
     "preact": "^10.11.2",
     "preact-hooks": "^0.0.0",
     "preact-router": "^4.1.0",

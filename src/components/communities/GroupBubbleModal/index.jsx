@@ -3,16 +3,16 @@ import {Button} from "../Buttons/index.jsx";
 import {OnlineBadge} from "../OnlineBadge/index.jsx";
 import {MemberListItem} from "../MemberListItem/index.jsx";
 
-export function GroupBubbleModal({groupId, onClose, onJoin}) {
+export function GroupBubbleModal({groupId, onClose, onJoin, onLeave}) {
 
 
     return (
         <div className={'group-bubble-modal-backdrop'}>
             <div className={'group-bubble-modal'}>
                 <div className={'modal-header'}>
-                    <img src="src/assets/SVG/close-icon.svg" style={{ opacity: 0 }} alt=""/>
+                    <img src="/src/assets/SVG/close-icon.svg" style={{opacity: 0}} alt=""/>
                     <h3 className={'modal-title'}>INFO</h3>
-                    <img src="src/assets/SVG/close-icon.svg" alt="" onClick={() => onClose()}/>
+                    <img src="/src/assets/SVG/close-icon.svg" alt="" onClick={() => onClose()}/>
                 </div>
                 <div className={'group-bubble-modal-wrapper'}>
                     <div className={'modal-description-container'}>
@@ -32,20 +32,31 @@ export function GroupBubbleModal({groupId, onClose, onJoin}) {
                                 <span>20</span>
                             </div>
                             <div className={'flex flex-row align-items-center'}>
-                                <OnlineBadge />
+                                <OnlineBadge/>
                                 <span>20</span>
                             </div>
                         </div>
                         <div className={'member-list'}>
-                            <MemberListItem />
-                            <MemberListItem />
-                            <MemberListItem />
-                            <MemberListItem />
+                            <MemberListItem/>
+                            <MemberListItem/>
+                            <MemberListItem/>
+                            <MemberListItem/>
                         </div>
                     </div>
                     <div className={'modal-action-buttons-container'}>
-                        <Button type={"secondary"} size={"x-large"} onClick={() => onClose()}>Close</Button>
-                        <Button type={"primary"} size={"x-large"} onClick={() => onJoin({groupId})}>Join</Button>
+                        {
+                            onJoin !== undefined ? (
+                                <>
+                                    <Button type={"secondary"} size={"x-large"} onClick={() => onClose()}>Close</Button>
+                                    <Button type={"primary"} size={"x-large"} onClick={() => onJoin({groupId})}>Join</Button>
+                                </>
+                            ) : (
+                                <>
+                                    <Button type={"primary"} size={"x-large"} onClick={() => onClose()}>Close</Button>
+                                    <Button type={"secondary"} size={"x-large"} onClick={() => onLeave({groupId})}>Leave</Button>
+                                </>
+                            )
+                        }
                     </div>
                 </div>
             </div>
