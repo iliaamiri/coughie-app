@@ -9,8 +9,10 @@ import Communities from "./routes/communities";
 import Navbar from "./components/navbar";
 import Questionnaire from "./routes/questionaire";
 import Profile from "./routes/user";
+import Hours from "./routes/daily/hours";
 import "./app.css";
 import {Chat} from "./routes/communities/chat/index.jsx";
+import MoneySpent from "./routes/daily/moneySpent";
 
 export function App() {
   return (
@@ -28,6 +30,9 @@ export function App() {
           <Route path="/communities" element={<Communities />} />
           <Route path="/communities/chat/:chatroomId" element={<Chat />} />
           <Route path="/user" element={<Profile />} />
+          <Route path="/daily/hours" element={<Hours />} />
+          <Route path="/daily/moneySpent" element={<MoneySpent />} />
+          
         </Routes>
       </BrowserRouter>
 

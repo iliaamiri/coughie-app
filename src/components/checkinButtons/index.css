@@ -1,0 +1,44 @@
+.check-in-box {
+    border: 1px solid #9EC6D7;
+    padding: 45px 35px;
+    margin: 100px  30px -50px ;
+    border-radius: 10px;
+}
+
+.check-in-box h3 {
+    color: #709999;
+}
+
+.check-in-box button{
+    border: 0;
+    padding: 6px 6px;
+    width: 120px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin: 18px 10px 2px;
+}
+
+.check-in-box button.left{
+    color: white;
+    background-color: #3EB798;
+
+}
+
+.check-in-box button.right{
+    color: #3EB798;
+    background-color: #AEE295;
+  
+}
+
+.check-in-box input {
+   border: 1px solid #9EC6D7;
+   padding: 10px 0 10px 0 ;
+   margin-top: 10px;
+   text-align: center;
+   color: #3EB798;
+}
+
+
+
