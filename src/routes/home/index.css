@@ -17,11 +17,8 @@ p{
     border-radius:10px;
     color:#fff;
     display:flex;
-   
     width:35.5vw;
     height: 35vw;
-    /* width:auto; */
-    /* padding: 10vw; */
 }
 
 .homeMenu div {
@@ -37,4 +34,33 @@ p{
     right:4vw;
     margin: 2.5vw 2vw;
     position: absolute;
+}
+
+.click-icon {
+    position: absolute;
+    z-index: 1;
+    height: 40px;
+    right: 70px;
+    bottom: 100px;
+    opacity:0;
+	transform: scale(1);
+	animation-name: pulse;
+    animation-iteration-count: 3;
+    animation-duration: 1.3s;
+}
+
+@keyframes pulse {
+	0% {
+		 opacity:0.5;
+	}
+
+	50% {
+		right: 80px;
+        bottom: 130px;
+	}
+
+	100% {
+		
+        opacity:0.5;
+	}
 }

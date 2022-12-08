@@ -32,7 +32,7 @@ const Home = () => {
               <img src="/src/assets/SVG/trophy.svg" alt="" />
             </Link>
           </div>
-          <p>achievements</p>
+          <p>Achievements</p>
         </div>
         <div>
           <div>
@@ -48,7 +48,7 @@ const Home = () => {
               <img src="/src/assets/SVG/community.svg" alt="" />
             </Link>
           </div>
-          <p>join a community</p>
+          <p>Community</p>
         </div>
         <div>
           <div>
@@ -62,8 +62,9 @@ const Home = () => {
 
       <RememberDialogue dialogue="I want to quit so I can use my money on more meaningful things"></RememberDialogue>
       <div>
+        <img class="click-icon" src="/src/assets/SVG/SVG/handpointing.svg" alt="click icon" />
       <Link href="/daily/plant">
-        <img id="plant" src="/src/assets/SVG/floweredPlant.svg" alt="" />
+        <img id="plant" src="/src/assets/SVG/floweredPlant.svg" alt="flowering Plant" />
         </Link>
       </div>
     </div>
