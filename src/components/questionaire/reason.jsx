@@ -28,6 +28,7 @@ const Reason = ({ isSubmit, prevStep, form, setForm, question }) => {
             type="text"
             value={form.reason}
             onChange={changeHandler}
+            maxLength="150"
           />
 
           <div className="btn-div">

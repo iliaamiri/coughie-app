@@ -15,6 +15,7 @@ const Home = () => {
     eCigaretteSaved: 1,
   });
 
+  console.log(user)
   useEffect(() => {
     if (data) {
       setUser(JSON.parse(data));
@@ -60,7 +61,7 @@ const Home = () => {
         </div>
       </div>
 
-      <RememberDialogue dialogue="I want to quit so I can use my money on more meaningful things"></RememberDialogue>
+      <RememberDialogue dialogue={user.reason}></RememberDialogue>
       <div>
         <img class="click-icon" src="/src/assets/SVG/SVG/handpointing.svg" alt="click icon" />
       <Link href="/daily/plant">

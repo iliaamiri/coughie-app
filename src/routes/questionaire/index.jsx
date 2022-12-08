@@ -15,11 +15,12 @@ export default function Questionnaire() {
   }
   return (
     <div className="questionnaire">
-      <div>
+      <div className="coughie-container"> 
         <div>
           <img src="/src/assets/main.png" alt="main" />
         </div>
         <h1>Coughie</h1>
+        <br />
         <p>"the secret to getting ahead is getting started"</p>
       </div>
       <MyButton text="START" onClick={clickHandler} />
