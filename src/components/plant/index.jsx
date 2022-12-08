@@ -1,4 +1,5 @@
 import "./index.css";
+import RememberDialogue from "../rememberDialogue";
 
 export default function Plant() {
     const vapedToday = localStorage.getItem("vapedToday?");
@@ -21,37 +22,57 @@ export default function Plant() {
                 src="/src/assets/SVG/SVG/plantProgress.svg"
             />
         );
+
+
     }
 
     if (vapedToday == "no" && moneySpent == 0) {
-        plantProgress = (
+        plantProgress = (<>
             <img id="plantProgress" src="/src/assets/SVG/SVG/maxFlower.svg" />
+            <p className="plant-notif"> 🌿🌿🌿 Your Oxygen has increased by 20 ! Amazing! ✨🌿🌿🌿 </p>
+            </>
         );
-       
+    }
+
+    if (vapedToday == "no" && moneySpent != 0) {
+        plantProgress = (<>
+            <img id="plantProgress" src="/src/assets/SVG/SVG/half-flowered.svg" />
+            <p className="plant-notif"> 🌿🌿🌿 Your Oxygen has increased by 15 ! 🌿🌿🌿 </p>
+            </>
+        );
+        
     }
 
     if (vapedToday == "yes" && hoursWithoutVaping > 14) {
         plantProgress = (
+          <>
             <img
                 id="plantProgress"
                 src="/src/assets/SVG/SVG/half-flowered.svg"
             />
+            <p className="plant-notif"> 🌿🌿🌿 Your Oxygen has increased by 15 ! 🌿🌿🌿 </p>
+            </>
         );
     } else {
         if (vapedToday == "yes" && hoursWithoutVaping >= 9) {
             plantProgress = (
+                <>
                 <img
                     id="plantProgress"
                     src="/src/assets/SVG/SVG/one-flower.svg"
                 />
+                 <p className="plant-notif"> 🌿🌿 Your Oxygen has increased by 10 ! Good Job! 🌿🌿 </p>
+                </>
             );
         } else {
             if (vapedToday == "yes" && hoursWithoutVaping < 9) {
-                plantProgress = (
+                plantProgress = (<>
                     <img
                         id="plantProgress"
                         src="/src/assets/SVG/SVG/plantProgress.svg"
                     />
+                    <p className="plant-notif"> 🌿 Your Oxygen has increased by 2... You will get there!🌿 </p>
+                    </>
                 );
             }
         }
@@ -68,6 +89,7 @@ export default function Plant() {
                 <h2 className={"daily-checkin-title"}>Day {dayNum}</h2>
                 {plantProgress}
             </div>
+            
         </>
     );
 }

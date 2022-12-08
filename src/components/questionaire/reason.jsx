@@ -30,7 +30,7 @@ const Reason = ({ prevStep, form, setForm, question }) => {
             type="text"
             value={form.reason}
             onChange={changeHandler}
-            maxLength="150"
+            maxLength="110"
           />
 
           <div className="btn-div">
