@@ -3,7 +3,7 @@ import MyInput from "../input";
 import MyButton from "../button";
 import { useNavigate } from "react-router-dom";
 
-const Reason = ({ isSubmit, prevStep, form, setForm, question }) => {
+const Reason = ({ prevStep, form, setForm, question }) => {
   const navigate = useNavigate();
   const prevHandler = () => {
     prevStep();

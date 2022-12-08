@@ -16,6 +16,8 @@ const CreateForm = () => {
     isSubmit: false,
     imageUrl: "/src/assets/profile.png",
     reason: "reason",
+    showStatus: true,
+    showGoal: true,
   });
 
   const nextStep = () => {
