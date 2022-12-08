@@ -3,6 +3,7 @@ import Home from "../../routes/home";
 import Calendar from "./calendar";
 import NameForm from "./nameForm";
 import Spend from "./spend";
+import Reason from "./reason";
 
 const CreateForm = () => {
   const [form, setForm] = useLocalStorage("user", {
@@ -14,6 +15,7 @@ const CreateForm = () => {
     eCigaretteSaved: 1,
     isSubmit: false,
     imageUrl: "/src/assets/profile.png",
+    reason: "reason",
   });
 
   const nextStep = () => {
@@ -40,11 +42,21 @@ const CreateForm = () => {
       case 3:
         return (
           <Calendar
+            prevStep={prevStep}
+            nextStep={nextStep}
+            form={form}
+            setForm={setForm}
+            question="When was the last time you vaped?"
+          />
+        );
+      case 4:
+        return (
+          <Reason
             isSubmit={true}
             prevStep={prevStep}
             form={form}
             setForm={setForm}
-            question="When was the last time you vaped?"
+            question="Why do you want to quit?"
           />
         );
       default:

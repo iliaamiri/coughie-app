@@ -13,6 +13,7 @@ const FormEditor = ({ setIsEdit }) => {
       spendMoney: 10,
       eCigaretteSaved: 1,
       isSubmit: true,
+      reason: "",
     }
   );
 
@@ -69,8 +70,17 @@ const FormEditor = ({ setIsEdit }) => {
           value={user.lastTimeVape}
           onChange={e => setUser({ ...user, lastTimeVape: e.target.value })}
         />
+
+        <span className="profile-span">Why do you want to quit?</span>
+        <textarea
+          className="my-textArea"
+          type="text"
+          value={user.reason}
+          onChange={e => setUser({ ...user, reason: e.target.value })}
+        />
+
         <div className="bottom-btn-div">
-          <MyButton type="bottom" text="Save" onClick={handleProfile} />
+          <MyButton type="bottom" text="Update " onClick={handleProfile} />
         </div>
       </form>
     </div>

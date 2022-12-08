@@ -6,6 +6,7 @@ import FormEditor from "../../components/profile/formEditor";
 
 const Profile = () => {
   const [isEdit, setIsEdit] = useState(false);
+  console.log(isEdit);
 
   return (
     <div className="profile">
