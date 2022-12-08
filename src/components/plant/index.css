@@ -1,0 +1,19 @@
+#plantProgress {
+    margin: 0;
+    position: absolute;
+    /* top: 600px; */
+    bottom: 300px;
+    left: 65px;
+    /* transform: translate(-140px, 105px); */
+    /* height: 240px; */
+    width: 280px;
+    z-index: 0;
+}
+
+h2.daily-checkin-title {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    color:#888ca2;
+}

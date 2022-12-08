@@ -37,7 +37,6 @@ export default function checkinButtons({ question, range, money }) {
       localStorage.setItem("moneySpent?", moneySpent);
       navigate("/daily/plant");
     }
-
     
 
     return (

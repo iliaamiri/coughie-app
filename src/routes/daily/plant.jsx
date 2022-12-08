@@ -1,4 +1,5 @@
 import DisplayBar from "../../components/displayBar";
+import PlantComp from "../../components/plant";
 import "./index.css";
 
 const Plant = () => (
@@ -11,9 +12,10 @@ const Plant = () => (
       </span></div>
   <div >
     <div>
-    <h2 className={'daily-checkin-title'}>Day 1</h2>
+    {/* <h2 className={'daily-checkin-title'}>Day 1</h2> */}
    
-      <img id="plantProgress" src="/src/assets/SVG/SVG/plantProgress.svg" alt="" />
+    <PlantComp></PlantComp>
+      
       </div>
       </div>
   </div>
