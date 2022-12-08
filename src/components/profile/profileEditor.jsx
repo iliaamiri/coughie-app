@@ -45,12 +45,12 @@ const ProfileEditor = () => {
           onClick={() => fileInputRef.current.click()}
         />
       )}
-      <div className="btn-div">
+      {/* <div className="btn-div">
         <MyButton
           onClick={() => fileInputRef.current.click()}
           text="Update your picture"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

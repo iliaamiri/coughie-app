@@ -21,7 +21,6 @@ const NameForm = ({ nextStep, form, setForm }) => {
         <MyInput
           type="text"
           name="uname"
-          className="name-input"
           value={form.uname}
           onChange={changeHandler}
         />
@@ -29,7 +28,6 @@ const NameForm = ({ nextStep, form, setForm }) => {
         <MyInput
           type="number"
           name="age"
-          className="age-input"
           value={form.age}
           onChange={ageHandler}
         />
