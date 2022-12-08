@@ -41,3 +41,11 @@ h1.hours {
     margin-top: 20px;
     font-size: 40px;
 }
+
+h2.daily-checkin-title {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    color:#888ca2;
+}
