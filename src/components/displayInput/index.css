@@ -19,3 +19,7 @@
     padding-top: 0.9rem;
     cursor: pointer;
   }
+
+  .input_reason{
+    justify-content: center;
+  }

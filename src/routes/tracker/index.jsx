@@ -13,6 +13,7 @@ const Tracker = () => {
       lastTimeVape: "",
       spendMoney: "",
       eCigaretteSaved: "",
+      reason:"",
     }
   );
   const [hours, setHours] = useState(0);
