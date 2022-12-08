@@ -10,10 +10,6 @@ const Calendar = ({ prevStep, question, form, setForm }) => {
   const prevHandler = () => {
     prevStep();
   };
-  const clickHandler = () => {
-    // setForm({ ...form, isSubmit: true });
-    return;
-  };
   const submitHandler = e => {
     e.preventDefault();
     if (form.lastTimeVape == "") {
