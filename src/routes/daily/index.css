@@ -40,8 +40,11 @@ h2.daily-checkin-title {
     text-align: center;
     color:#888ca2;
 }
-h2.daily-checkin-title.one-leaf {
+h2.daily-checkin-title.is-progress {
     margin-top: 35px;
+}
+h2.daily-checkin-title.one-flower {
+    margin-top: 100px;
 }
 
 p.plant-notif {
