@@ -22,10 +22,15 @@ header div.top-navbar-container div.icon-placeholder {
 header div.top-navbar-container h2.group-title {
     font-weight: 1000;
     font-family: 'Source Sans Pro', 'Lato', sans-serif;
+    width: 60vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 header div.top-navbar-container div.meta-info-top {
     display: flex;
+    justify-content: center;
     gap: 14px;
     font-family: 'Lato', sans-serif;
 }

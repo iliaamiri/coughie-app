@@ -9,9 +9,9 @@ export default function Plant() {
     );
     let dayNum = Number(localStorage.getItem("day"));
     let oxygen = Number(localStorage.getItem("oxygen"));
-  
+
     let plantProgress = (
-        <img id="plantProgress" src="/src/assets/SVG/SVG/plantProgress.svg" />
+        <img id="plantProgress" src="/src/assets/SVG/SVG/plantProgress.svg" alt={'progress of the plant'}/>
     );
 
     if (!vapedToday) {
@@ -20,6 +20,7 @@ export default function Plant() {
             <img
                 id="plantProgress"
                 src="/src/assets/SVG/SVG/plantProgress.svg"
+                alt={'progress of the plant'}
             />
         );
 
@@ -28,50 +29,50 @@ export default function Plant() {
 
     if (vapedToday == "no" && moneySpent == 0) {
         plantProgress = (<>
-            <img id="plantProgress" src="/src/assets/SVG/SVG/maxFlower.svg" />
-            <p className="plant-notif"> 🌿🌿🌿 Your Oxygen has increased by 20 ! Amazing! ✨🌿🌿🌿 </p>
+                <img id="plantProgress" src="/src/assets/SVG/SVG/maxFlower.svg"/>
+                <p className="plant-notif"> 🌿🌿🌿 Your Oxygen has increased by 20 ! Amazing! ✨🌿🌿🌿 </p>
             </>
         );
     }
 
     if (vapedToday == "no" && moneySpent != 0) {
         plantProgress = (<>
-            <img id="plantProgress" src="/src/assets/SVG/SVG/half-flowered.svg" />
-            <p className="plant-notif"> 🌿🌿🌿 Your Oxygen has increased by 15 ! 🌿🌿🌿 </p>
+                <img id="plantProgress" src="/src/assets/SVG/SVG/half-flowered.svg"/>
+                <p className="plant-notif"> 🌿🌿🌿 Your Oxygen has increased by 15 ! 🌿🌿🌿 </p>
             </>
         );
-        
+
     }
 
     if (vapedToday == "yes" && hoursWithoutVaping > 14) {
         plantProgress = (
-          <>
-            <img
-                id="plantProgress"
-                src="/src/assets/SVG/SVG/half-flowered.svg"
-            />
-            <p className="plant-notif"> 🌿🌿🌿 Your Oxygen has increased by 15 ! 🌿🌿🌿 </p>
+            <>
+                <img
+                    id="plantProgress"
+                    src="/src/assets/SVG/SVG/half-flowered.svg"
+                />
+                <p className="plant-notif"> 🌿🌿🌿 Your Oxygen has increased by 15 ! 🌿🌿🌿 </p>
             </>
         );
     } else {
         if (vapedToday == "yes" && hoursWithoutVaping >= 9) {
             plantProgress = (
                 <>
-                <img
-                    id="plantProgress"
-                    src="/src/assets/SVG/SVG/one-flower.svg"
-                />
-                 <p className="plant-notif"> 🌿🌿 Your Oxygen has increased by 10 ! Good Job! 🌿🌿 </p>
+                    <img
+                        id="plantProgress"
+                        src="/src/assets/SVG/SVG/one-flower.svg"
+                    />
+                    <p className="plant-notif"> 🌿🌿 Your Oxygen has increased by 10 ! Good Job! 🌿🌿 </p>
                 </>
             );
         } else {
             if (vapedToday == "yes" && hoursWithoutVaping < 9) {
                 plantProgress = (<>
-                    <img
-                        id="plantProgress"
-                        src="/src/assets/SVG/SVG/plantProgress.svg"
-                    />
-                    <p className="plant-notif"> 🌿 Your Oxygen has increased by 2... You will get there!🌿 </p>
+                        <img
+                            id="plantProgress"
+                            src="/src/assets/SVG/SVG/plantProgress.svg"
+                        />
+                        <p className="plant-notif"> 🌿 Your Oxygen has increased by 2... You will get there!🌿 </p>
                     </>
                 );
             }
@@ -81,15 +82,15 @@ export default function Plant() {
     return (
         <>
             <div className="oxygenLevels">
-                <img src="/assets/coca-leaves.png" alt="" />
+                <img src="/assets/coca-leaves.png" alt=""/>
                 <span>{oxygen} O2</span>
-              
+
             </div>
-            <div>
+            <div className={'daily-checkin-container'}>
                 <h2 className={"daily-checkin-title"}>Day {dayNum}</h2>
                 {plantProgress}
             </div>
-            
+
         </>
     );
 }

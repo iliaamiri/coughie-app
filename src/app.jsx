@@ -13,8 +13,14 @@ import Hours from "./routes/daily/hours";
 import "./app.css";
 import {Chat} from "./routes/communities/chat/index.jsx";
 import MoneySpent from "./routes/daily/moneySpent";
+import {useEffect} from "preact/hooks";
+import * as mockExperienceService from "./lib/services/mockExperience.service.js";
 
 export function App() {
+  useEffect(() => {
+    mockExperienceService.startMocking();
+  }, []);
+
   return (
     <>
       {/* <Header /> */}

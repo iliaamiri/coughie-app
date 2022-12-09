@@ -1,17 +1,14 @@
-#plantProgress {
-    margin: 0;
-    position: absolute;
-  
-    bottom: 300px;
-    left: 65px;
-    width: 280px;
-    z-index: 0;
+
+.daily-checkin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding-top: 26vh;
 }
 
-h2.daily-checkin-title {
-    z-index: 1;
-    position: absolute;
-    top: 50%;
-    left: 42%;
-    color:#888ca2;
+#plantProgress {
+    width: 280px;
+    z-index: 0;
 }

@@ -6,10 +6,10 @@ export function ChatBubble({ isMe = false, user, message }) {
     return (
         <div className={`chatbubble-container ${isMe ? 'me' : 'others'}`}>
             <div className={"chatbubble-avatar"}>
-                <img src={user.avatar} alt=""/>
+                <img src={user.imageUrl} alt=""/>
             </div>
             <div className={`chatbubble-bubble-container`}>
-                <span>{user.name}</span>
+                <span>{user.uname}</span>
                 <div className={`chatbubble-bubble-box`}>
                     <p>{message.messageText}</p>
                     <div className={`bubble-footer`}>

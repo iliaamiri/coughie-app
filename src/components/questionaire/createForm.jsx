@@ -4,9 +4,12 @@ import Calendar from "./calendar";
 import NameForm from "./nameForm";
 import Spend from "./spend";
 import Reason from "./reason";
+import {generateUUID} from "../../lib/utils.js";
+import * as userService from "../../lib/services/user.service.js";
 
 const CreateForm = () => {
   const [form, setForm] = useLocalStorage("user", {
+    id: generateUUID(),
     step: 1,
     uname: "name",
     age: 20,
@@ -66,6 +69,7 @@ const CreateForm = () => {
     }
   };
   if (form.isSubmit) {
+    userService.setup();
     return (
       <>
         <Home />

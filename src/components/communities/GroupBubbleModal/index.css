@@ -5,6 +5,7 @@ div.group-bubble-modal-backdrop {
     width: 100vw;
     z-index: 11;
     backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 div.group-bubble-modal {

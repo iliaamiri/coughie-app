@@ -5,9 +5,24 @@ import {useEffect, useState} from "preact/hooks";
 import {GroupBubbleModal} from "../../components/communities/GroupBubbleModal";
 import {UserActionsContext} from "../../lib/contexts";
 import {Button} from "../../components/communities/Buttons/index.jsx";
+import * as groupService from "../../lib/services/group.service.js";
+import * as userService from "../../lib/services/user.service.js";
+import * as mockExperienceService from "../../lib/services/mockExperience.service.js";
+import {useUser} from "../../lib/hooks/useUser.jsx";
+
+const communitySizeToClassName = (size) => {
+    if (size < 5) {
+        return 'small';
+    } else if (size < 10) {
+        return 'medium';
+    } else {
+        return 'large';
+    }
+}
 
 const Communities = () => {
-    const [currentOpenGroupId, setCurrentOpenGroupId] = useState(null);
+    const [user] = useUser();
+    const [currentOpenGroup, setCurrentOpenGroup] = useState(null);
 
     const [communitiesList, setCommunitiesList] = useState(null);
 
@@ -23,50 +38,79 @@ const Communities = () => {
             }
         };
         document.querySelector('body').addEventListener('scroll', handleScroll);
+
+        setCommunitiesList(groupService.findAllGroups().map(g => {
+            g.isSearchMatch = true;
+            return g;
+        }));
+
         return () => {
             document.querySelector('body').removeEventListener('scroll', handleScroll);
         };
     }, []);
 
     const handleSearchSubmit = () => {
-
+        console.log("search submitted");
     };
     const handleSearchBarChange = (value) => {
-
+        setCommunitiesList((currentCommunity) => {
+            if (value.length < 1) {
+                return [...currentCommunity.map(g => {
+                    g.isSearchMatch = true;
+                    return g;
+                })];
+            }
+            const shadowed = [...currentCommunity];
+            return shadowed.map((community) => {
+                community.name.toLowerCase().includes(value.toLowerCase()) ? community.isSearchMatch = true : community.isSearchMatch = false;
+                return community;
+            });
+        });
     };
 
-    const handleJoinChatRoom = ({ groupId }) => {
-        console.log(`Joining Group Chat #${groupId}`)
-        window.location.href = "/communities/chat/" + groupId;
+    const handleJoinChatRoom = (group) => {
+        userService.joinGroup({groupId: group.id});
+        window.location.href = "/communities/chat/" + group.id;
     };
-    const handleViewChatRoom = ({ groupId }) => {
-        console.log(`Viewing Group Chat #${groupId}`)
-        setCurrentOpenGroupId(groupId);
+    const handleViewChatRoom = (group) => {
+        setCurrentOpenGroup(group);
     };
+
+    const handleLoadMore = () => {
+        // seed more communities
+        const generatedGroups = mockExperienceService.seedRandomGroups(10).map(g => {
+            g.isSearchMatch = true;
+            return g;
+        });
+        setCommunitiesList([...communitiesList, ...generatedGroups]);
+    }
 
     return (
         <>
-            {currentOpenGroupId && <GroupBubbleModal onClose={() => setCurrentOpenGroupId(null)} onJoin={handleJoinChatRoom} groupId={currentOpenGroupId}/>}
+            {currentOpenGroup &&
+                <GroupBubbleModal onClose={() => setCurrentOpenGroup(null)} onJoin={handleJoinChatRoom}
+                                  group={currentOpenGroup}/>}
             <header className={'communities'}>
                 <h1 className={'communities-page-title'}><span>Community</span></h1>
-                <SearchBar isShown={shouldSearchBarAppear} onSearchSubmit={handleSearchSubmit} onSearchBarChange={handleSearchBarChange}/>
+                <SearchBar isShown={shouldSearchBarAppear} onSearchSubmit={handleSearchSubmit}
+                           onSearchBarChange={handleSearchBarChange}/>
             </header>
             <main className={'communities-bubble-container'}>
                 <UserActionsContext.Provider value={{
                     onJoin: handleJoinChatRoom, onView: handleViewChatRoom
                 }}>
-                    <GroupBubble groupId={"ascrk"} size={'large'} isAnimated={true} />
-                    <GroupBubble groupId={"asdasdfg"} size={'small'} />
-                    <GroupBubble groupId={"friekdl"} size={'small'} isAnimated={true} />
-                    <GroupBubble groupId={"dapofj03dklsj"} size={'large'} />
-                    <GroupBubble groupId={"fklasd"} size={'medium'} isAnimated={true} />
-                    <GroupBubble size={'medium'} />
-                    <GroupBubble size={'medium'} isAnimated={true} />
-                    <GroupBubble size={'small'} isAnimated={true} />
-                    <GroupBubble size={'small'} isAnimated={true} />
-                    <GroupBubble size={'small'} isAnimated={true} />
-                    <GroupBubble size={'small'} isAnimated={true} />
-                    <Button customClassNames={'load-more-button'} type={"primary"} size={"x-large"}>Load More</Button>
+                    {
+                        communitiesList === null ? (
+                            <div>Loading...</div>
+                        ) : communitiesList.filter(g => g.isSearchMatch).map((group, index) => (
+                            <GroupBubble group={group} size={communitySizeToClassName(group.membersIds.length)}
+                                         isAnimated={index % 2 !== 0}/>
+                        ))
+                    }
+                    <div className={'load-more-button-container'}>
+                        <Button customClassNames={'load-more-button'} type={"primary"} size={"x-large"}
+                                onClick={() => handleLoadMore()}>Load More</Button>
+                    </div>
                 </UserActionsContext.Provider>
             </main>
         </>

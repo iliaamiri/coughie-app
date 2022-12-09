@@ -8,20 +8,24 @@ export function findAllMessages() {
     return JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "[]");
 }
 
-export function createNewMessage({messageText, groupId, userId}) {
+export function findAllMessagesByGroupId(groupId) {
+    return findAllMessages().filter(m => m.groupId === groupId);
+}
+
+export function createNewMessage({messageText, groupId, userId, createdAt}) {
     const uuid = generateUUID();
     const newMessage = {
-        id: uuid(),
+        id: uuid,
         messageText,
         groupId,
         userId,
-        createdAt: Date.now()
+        createdAt: createdAt ?? Date.now()
     };
     localStorage.setItem(STORAGE_KEY, JSON.stringify([...findAllMessages(), newMessage]));
-    return uuid;
+    return newMessage;
 }
 
-export function addMessage({ userId, groupId, messageText }) {
+export function addMessage({ userId, groupId, messageText, createdAt }) {
     const group = groupService.getGroupById(groupId);
     if (!group) {
         throw new Error(`group doesn't exist ${group} ${groupId}`);
@@ -34,10 +38,11 @@ export function addMessage({ userId, groupId, messageText }) {
         throw new Error(`this user is not in this group. ${userId}. ${group.membersIds.join("  ")}`);
     }
 
-    const messageId = createNewMessage({messageText, groupId, userId});
+    const message = createNewMessage({messageText, groupId, userId, createdAt});
     groupService.mapSave(g => {
        if (g.id !== groupId) return g;
-       g.messagesIds.push(messageId);
+       g.messagesIds.push(message.id);
        return g;
     });
+    return message;
 }

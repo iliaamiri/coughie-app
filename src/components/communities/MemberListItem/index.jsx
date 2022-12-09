@@ -1,19 +1,13 @@
 import "./index.css";
 
-const sampleMember = {
-    name: "Megan",
-    avatar: "/src/assets/profileAvatars/atikh-bana-_KaMTEmJnxY-unsplash.jpg",
-    o2: 10000,
-}
-
-export function MemberListItem({member = sampleMember}) {
+export function MemberListItem({member}) {
     return (
         <div className={'member-item'}>
             <div>
-                <img className={'avatar'} src={member.avatar} alt=""/>
-                <span>{member.name}</span>
+                <img className={'avatar'} src={member.imageUrl ?? '/src/assets/profileAvatars/default.jpg'} alt=""/>
+                <span>{member.uname}</span>
             </div>
-            <span className={'o2'}>{member.o2}</span>
+            <span className={'o2'}>{member.o2} O2</span>
         </div>
     );
 }

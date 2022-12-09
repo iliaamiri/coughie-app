@@ -2,9 +2,16 @@ import "./index.css";
 import {Button} from "../Buttons/index.jsx";
 import {OnlineBadge} from "../OnlineBadge/index.jsx";
 import {MemberListItem} from "../MemberListItem/index.jsx";
+import {randomIntFromInterval} from "../../../lib/utils.js";
+import {useEffect, useState} from "preact/hooks";
+import * as userService from "../../../lib/services/user.service.js";
 
-export function GroupBubbleModal({groupId, onClose, onJoin, onLeave}) {
+export function GroupBubbleModal({group, onClose, onJoin, onLeave}) {
+    const [membersList, setMembersList] = useState(null);
 
+    useEffect(() => {
+        setMembersList(userService.findUsersByGroupId(group.id));
+    }, []);
 
     return (
         <div className={'group-bubble-modal-backdrop'}>
@@ -18,29 +25,32 @@ export function GroupBubbleModal({groupId, onClose, onJoin, onLeave}) {
                     <div className={'modal-description-container'}>
                         <div className={'description-section'}>
                             <span>Name:</span>
-                            <p>Sample Group Name</p>
+                            <p>{group.name}</p>
                         </div>
                         <div className={'description-section'}>
                             <span>Description:</span>
-                            <p>lorem ipsum idk what else ipsum lorem is 1930 fdj .</p>
+                            <p>{group.description}</p>
                         </div>
                     </div>
                     <div className={'modal-member-list-container'}>
                         <div className={'meta-info-bar'}>
                             <div className={'flex flex-row align-items-center'}>
-                                <img src="src/assets/SVG/user-icon.svg" alt=""/>
-                                <span>20</span>
+                                <img src="/src/assets/SVG/user-icon.svg" alt=""/>
+                                <span>{group.membersIds.length}</span>
                             </div>
                             <div className={'flex flex-row align-items-center'}>
                                 <OnlineBadge/>
-                                <span>20</span>
+                                <span>{randomIntFromInterval(0, group.membersIds.length)}</span>
                             </div>
                         </div>
                         <div className={'member-list'}>
-                            <MemberListItem/>
-                            <MemberListItem/>
-                            <MemberListItem/>
-                            <MemberListItem/>
+                            {
+                                !membersList ? (
+                                    <div>Loading...</div>
+                                ) : membersList.map((member) => (
+                                    <MemberListItem member={member} />
+                                ))
+                            }
                         </div>
                     </div>
                     <div className={'modal-action-buttons-container'}>
@@ -48,12 +58,14 @@ export function GroupBubbleModal({groupId, onClose, onJoin, onLeave}) {
                             onJoin !== undefined ? (
                                 <>
                                     <Button type={"secondary"} size={"x-large"} onClick={() => onClose()}>Close</Button>
-                                    <Button type={"primary"} size={"x-large"} onClick={() => onJoin({groupId})}>Join</Button>
+                                    <Button type={"primary"} size={"x-large"}
+                                            onClick={() => onJoin(group)}>Join</Button>
                                 </>
                             ) : (
                                 <>
                                     <Button type={"primary"} size={"x-large"} onClick={() => onClose()}>Close</Button>
-                                    <Button type={"secondary"} size={"x-large"} onClick={() => onLeave({groupId})}>Leave</Button>
+                                    <Button type={"secondary"} size={"x-large"}
+                                            onClick={() => onLeave(group)}>Leave</Button>
                                 </>
                             )
                         }

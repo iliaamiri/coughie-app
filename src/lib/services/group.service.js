@@ -6,7 +6,7 @@ export function findAllGroups() {
     return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
 }
 
-export function getGroupById({groupId}) {
+export function getGroupById(groupId) {
     return findAllGroups().find(g => g.id === groupId);
 }
 
@@ -21,6 +21,10 @@ export function createGroup({name, description, messagesIds, membersIds}) {
         createdAt: Date.now()
     }]));
     return uuid;
+}
+
+export function createGroups(groups) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify([...findAllGroups(), ...groups.map(g => ({ ...g, createdAt: g.createdAt ?? Date.now() }))]));
 }
 
 export function deleteGroupById({groupId}) {
