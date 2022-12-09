@@ -14,10 +14,10 @@ const ImageEditor = ({ setIsEdit }) => {
       spendMoney: 10,
       eCigaretteSaved: 1,
       isSubmit: true,
-      imageUrl: "/src/assets/profile.png",
+      imageUrl: "/assets/profileAvatars/default.jpg",
     }
   );
-  const [imageUrl, setImageUrl] = useState("/src/assets/profile.png");
+  const [imageUrl, setImageUrl] = useState("/assets/profileAvatars/default.jpg");
 
   const handleFileSelect = e => {
     const reader = new FileReader();
@@ -44,7 +44,7 @@ const ImageEditor = ({ setIsEdit }) => {
       {imageUrl && (
         <img
           className="image-editor"
-          src={user?.imageUrl ? user.imageUrl : "/src/assets/profile.png"}
+          src={user?.imageUrl ? user.imageUrl : "/assets/profileAvatars/default.jpg"}
           alt=""
         />
       )}

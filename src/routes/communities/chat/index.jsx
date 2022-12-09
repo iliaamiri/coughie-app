@@ -107,13 +107,13 @@ export function Chat() {
             <header className={"chat-header-container"}>
                 <div className={"top-navbar-container"}>
                     <div className={'icon-placeholder'}>
-                        <img src="/src/assets/SVG/back-arrow.svg" alt="back arrow" onClick={() => handleClickBackArrow()}/>
+                        <img src="/assets/SVG/back-arrow.svg" alt="back arrow" onClick={() => handleClickBackArrow()}/>
                     </div>
                     <div className={""}>
                         <h2 className={'group-title'}>{groupData.current.name}</h2>
                         <div className={'meta-info-top'}>
                             <div className={'flex flex-row align-items-center'}>
-                                <img src="/src/assets/SVG/user-icon.svg" alt=""/>
+                                <img src="/assets/SVG/user-icon.svg" alt=""/>
                                 <span>{groupData.current.membersIds.length}</span>
                             </div>
                             <div className={'flex flex-row align-items-center'}>
@@ -123,7 +123,7 @@ export function Chat() {
                         </div>
                     </div>
                     <div className={'icon-placeholder'}>
-                        <img src="/src/assets/SVG/people.svg" alt="Icon of a group" onClick={() => handleClickGroupIcon()}/>
+                        <img src="/assets/SVG/people.svg" alt="Icon of a group" onClick={() => handleClickGroupIcon()}/>
                     </div>
                 </div>
             </header>
@@ -140,7 +140,7 @@ export function Chat() {
                         onChange={(e) => setNewMessageValue(e.target.value)}
                     />
                     <span className={'attachment-button'}>
-                        <img src="/src/assets/SVG/attach-filled.svg" alt="" onClick={() => handleClickAttachment()}/>
+                        <img src="/assets/SVG/attach-filled.svg" alt="" onClick={() => handleClickAttachment()}/>
                     </span>
                     <span className={'send-button'} onClick={() => handleSend()}>Send</span>
                 </div>

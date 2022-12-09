@@ -17,7 +17,7 @@ const CreateForm = () => {
     spendMoney: 100,
     eCigaretteSaved: 1,
     isSubmit: false,
-    imageUrl: "/src/assets/profile.png",
+    imageUrl: "/assets/profileAvatars/default.jpg",
     reason: "reason",
     showStatus: true,
     showGoal: true,

@@ -11,7 +11,7 @@ export function startMocking() {
             {
                 id: generateUUID(),
                 uname: "Megan",
-                imageUrl: "/src/assets/profileAvatars/atikh-bana-_KaMTEmJnxY-unsplash.jpg",
+                imageUrl: "/assets/profileAvatars/atikh-bana-_KaMTEmJnxY-unsplash.jpg",
                 reason: "I want to quit smoking because I want to be healthier and I want to be able to run a marathon.",
                 o2: 1300,
                 createdAt: Date.now(),
@@ -19,7 +19,7 @@ export function startMocking() {
             {
                 id: generateUUID(),
                 uname: "Ben",
-                imageUrl: "/src/assets/profileAvatars/ben-blennerhassett-ZXfUUM_LR0k-unsplash.jpg",
+                imageUrl: "/assets/profileAvatars/ben-blennerhassett-ZXfUUM_LR0k-unsplash.jpg",
                 reason: "Because of my family.",
                 o2: 500,
                 createdAt: Date.now(),
@@ -27,7 +27,7 @@ export function startMocking() {
             {
                 id: generateUUID(),
                 uname: "Christian",
-                imageUrl: "/src/assets/profileAvatars/christian-ferrer-8vT-DgHZDG4-unsplash.jpg",
+                imageUrl: "/assets/profileAvatars/christian-ferrer-8vT-DgHZDG4-unsplash.jpg",
                 reason: "cause my mom told me to",
                 o2: 430,
                 createdAt: Date.now(),
@@ -35,7 +35,7 @@ export function startMocking() {
             {
                 id: generateUUID(),
                 uname: "Jimmy",
-                imageUrl: "/src/assets/profileAvatars/jimmy-fermin-bqe0J0b26RQ-unsplash.jpg",
+                imageUrl: "/assets/profileAvatars/jimmy-fermin-bqe0J0b26RQ-unsplash.jpg",
                 reason: "because I want to be healthier",
                 o2: 100,
                 createdAt: Date.now(),
@@ -43,7 +43,7 @@ export function startMocking() {
             {
                 id: generateUUID(),
                 uname: "Julian",
-                imageUrl: "/src/assets/profileAvatars/julian-wan-WNoLnJo7tS8-unsplash.jpg",
+                imageUrl: "/assets/profileAvatars/julian-wan-WNoLnJo7tS8-unsplash.jpg",
                 reason: "I always wanted to quit smoking but I never had the motivation to do so.",
                 o2: 1000,
                 createdAt: Date.now(),
@@ -51,7 +51,7 @@ export function startMocking() {
             {
                 id: generateUUID(),
                 uname: "Shawn",
-                imageUrl: "/src/assets/profileAvatars/shttefan-Q--oPI42ArQ-unsplash.jpg",
+                imageUrl: "/assets/profileAvatars/shttefan-Q--oPI42ArQ-unsplash.jpg",
                 reason: "Don't want to die at a young age",
                 o2: 1700,
                 createdAt: Date.now(),
@@ -59,7 +59,7 @@ export function startMocking() {
             {
                 id: generateUUID(),
                 uname: "Shawnty",
-                imageUrl: "/src/assets/profileAvatars/omid-armin-b5yGzWOpkMo-unsplash.jpg",
+                imageUrl: "/assets/profileAvatars/omid-armin-b5yGzWOpkMo-unsplash.jpg",
                 reason: "i want to be healthy and age slower",
                 o2: 2000,
                 createdAt: Date.now(),
@@ -67,7 +67,7 @@ export function startMocking() {
             {
                 id: generateUUID(),
                 uname: "Parimah",
-                imageUrl: "/src/assets/profileAvatars/omid-armin-yisZonvqh54-unsplash.jpg",
+                imageUrl: "/assets/profileAvatars/omid-armin-yisZonvqh54-unsplash.jpg",
                 reason: "i smoke a lot and i want to stop",
                 o2: 990,
                 createdAt: Date.now(),
@@ -75,7 +75,7 @@ export function startMocking() {
             {
                 id: generateUUID(),
                 uname: "Kevin",
-                imageUrl: "/src/assets/profileAvatars/ryan-hoffman-Ft4p5E9HjTQ-unsplash.jpg",
+                imageUrl: "/assets/profileAvatars/ryan-hoffman-Ft4p5E9HjTQ-unsplash.jpg",
                 reason: "i want to be healthier and i want to be stronger",
                 o2: 5000,
                 createdAt: Date.now(),

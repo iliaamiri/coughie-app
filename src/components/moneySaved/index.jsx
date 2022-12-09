@@ -1,7 +1,5 @@
 import { useState } from "preact/hooks";
 import "./index.css";
-import iconMoneyBig from "/src/assets/icon_money_big.png";
-import backBtn from "/src/assets/back_btn.png";
 import MyButton from "../button";
 import MyGoal from "../myGoal";
 
@@ -118,11 +116,11 @@ export default function MoneySaved({
       <div className="moneyDiv">
         <div className="btnDiv">
           <div>
-            <img src={backBtn} className="backBtn" onClick={goBack} />
+            <img src={"/assets/back_btn.png"} className="backBtn" onClick={goBack} />
           </div>
           <div className="moneySavedLetter">Money Saved</div>
         </div>
-        <img className="moneyIcon" src={iconMoneyBig} alt="smoke-free" />
+        <img className="moneyIcon" src={"/assets/icon_money_big.png"} alt="smoke-free" />
         <div className="getWeekly">${getWeeklyMoneySaved()}</div>
 
         <div className="date">

@@ -14,7 +14,7 @@ export function GroupBubble({ group, size = "large", isAnimated = false }) {
                 <h2>{group.name}</h2>
                 <div className={'meta-info'}>
                     <div className={'flex flex-row align-items-center'}>
-                        <img src="src/assets/SVG/user-icon.svg" alt=""/>
+                        <img src="public/assets/assets/SVG/user-icon.svg" alt=""/>
                         <span>{group.membersIds.length}</span>
                     </div>
                     <div className={'flex flex-row align-items-center'}>

@@ -12,7 +12,7 @@ export default function Navbar() {
             <ul>
                 <li>
                     <Link className="nav-link" onClick={backHandler}>
-                        <img className='navButton' src="/src/assets/previous.png" alt="previous"/>
+                        <img className='navButton' src="/assets/previous.png" alt="previous"/>
                     </Link>
                 </li>
                 <li>
@@ -22,7 +22,7 @@ export default function Navbar() {
                 </li>
                 <li>
                     <Link className="nav-link" href="/user">
-                        <img className='navButton user' src="/src/assets/user.png" alt="user profile"/>
+                        <img className='navButton user' src="/assets/user.png" alt="user profile"/>
                     </Link>
                 </li>
             </ul>

@@ -1,12 +1,10 @@
 import "./index.css";
-import thinkIcon from "/src/assets/think-icon.png";
-import sharedIcon from "/src/assets/shared-icon.png";
 
 export default function DisplayInput({ user }) {
   const data = localStorage.getItem("user");
   return (
     <div className="input">
-      <img className="icon" src={thinkIcon} alt="smoke-free" />
+      <img className="icon" src={"/assets/think-icon.png"} alt="smoke-free" />
       <div>
         <p className="">Remember why you quit </p>
         <div className="input_reason">
@@ -14,7 +12,7 @@ export default function DisplayInput({ user }) {
         </div>
       </div>
       <div className="shared">
-        <img className="icon" src={sharedIcon} alt="smoke-free" />
+        <img className="icon" src={"/assets/shared-icon.png"} alt="smoke-free" />
       </div>
     </div>
   );

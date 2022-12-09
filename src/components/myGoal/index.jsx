@@ -1,9 +1,4 @@
 import "./index.css";
-import backBtn from "/src/assets/back_btn.png";
-import appleWatch from "/src/assets/appleWatch.png";
-import keyboard from "/src/assets/keyboard.png";
-import coats from "/src/assets/coat.png";
-import boots from "/src/assets/boots.png";
 import { useState } from "preact/hooks";
 
 export default function MyGoal({ setIsClicked, getWeeklyMoneySaved }) {
@@ -38,7 +33,7 @@ export default function MyGoal({ setIsClicked, getWeeklyMoneySaved }) {
     <div className="myGoalDiv">
       <div className="btnDiv">
         <div>
-          <img src={backBtn} className="backBtn" onClick={goBack} />
+          <img src={"/assets/back_btn.png"} className="backBtn" onClick={goBack} />
         </div>
         <div className="myGoalLetter">My Goal</div>
       </div>
@@ -49,7 +44,7 @@ export default function MyGoal({ setIsClicked, getWeeklyMoneySaved }) {
 
       <div className="productDiv">
         <div className="watch">
-          <img src={appleWatch} className="appleWatch" />
+          <img src={"/assets/appleWatch.png"} className="appleWatch" />
         </div>
         <div className="percentageDiv">
           <div className="barPercentage">Apple Watch</div>
@@ -60,7 +55,7 @@ export default function MyGoal({ setIsClicked, getWeeklyMoneySaved }) {
       </div>
       <div className="productDiv">
         <div className="watch">
-          <img src={keyboard} className="appleWatch" />
+          <img src={"/assets/keyboard.png"} className="appleWatch" />
         </div>
         <div className="percentageDiv">
           <div className="barPercentage">Keyboard</div>
@@ -71,7 +66,7 @@ export default function MyGoal({ setIsClicked, getWeeklyMoneySaved }) {
       </div>
       <div className="productDiv">
         <div className="watch">
-          <img src={coats} className="appleWatch" />
+          <img src={"/assets/coat.png"} className="appleWatch" />
         </div>
         <div className="percentageDiv">
           <div className="barPercentage">Coats</div>
@@ -82,7 +77,7 @@ export default function MyGoal({ setIsClicked, getWeeklyMoneySaved }) {
       </div>
       <div className="productDiv">
         <div className="watch">
-          <img src={boots} className="appleWatch" />
+          <img src={"/assets/boots.png"} className="appleWatch" />
         </div>
         <div className="percentageDiv">
           <div className="barPercentage">Boots</div>

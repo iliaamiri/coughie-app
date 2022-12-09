@@ -17,9 +17,9 @@ export function GroupBubbleModal({group, onClose, onJoin, onLeave}) {
         <div className={'group-bubble-modal-backdrop'}>
             <div className={'group-bubble-modal'}>
                 <div className={'modal-header'}>
-                    <img src="/src/assets/SVG/close-icon.svg" style={{opacity: 0}} alt=""/>
+                    <img src="/assets/SVG/close-icon.svg" style={{opacity: 0}} alt=""/>
                     <h3 className={'modal-title'}>INFO</h3>
-                    <img src="/src/assets/SVG/close-icon.svg" alt="" onClick={() => onClose()}/>
+                    <img src="/assets/SVG/close-icon.svg" alt="" onClick={() => onClose()}/>
                 </div>
                 <div className={'group-bubble-modal-wrapper'}>
                     <div className={'modal-description-container'}>
@@ -35,7 +35,7 @@ export function GroupBubbleModal({group, onClose, onJoin, onLeave}) {
                     <div className={'modal-member-list-container'}>
                         <div className={'meta-info-bar'}>
                             <div className={'flex flex-row align-items-center'}>
-                                <img src="/src/assets/SVG/user-icon.svg" alt=""/>
+                                <img src="/assets/SVG/user-icon.svg" alt=""/>
                                 <span>{group.membersIds.length}</span>
                             </div>
                             <div className={'flex flex-row align-items-center'}>

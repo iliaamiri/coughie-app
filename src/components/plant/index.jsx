@@ -11,7 +11,7 @@ export default function Plant() {
     let oxygen = Number(localStorage.getItem("oxygen"));
 
     let plantProgress = (
-        <img id="plantProgress" src="/src/assets/SVG/SVG/plantProgress.svg" alt={'progress of the plant'}/>
+        <img id="plantProgress" src="/assets/SVG/SVG/plantProgress.svg" alt={'progress of the plant'}/>
     );
 
     if (!vapedToday) {
@@ -19,7 +19,7 @@ export default function Plant() {
         plantProgress = (
             <img
                 id="plantProgress"
-                src="/src/assets/SVG/SVG/plantProgress.svg"
+                src="/assets/SVG/SVG/plantProgress.svg"
                 alt={'progress of the plant'}
             />
         );
@@ -29,7 +29,7 @@ export default function Plant() {
 
     if (vapedToday == "no" && moneySpent == 0) {
         plantProgress = (<>
-                <img id="plantProgress" src="/src/assets/SVG/SVG/maxFlower.svg"/>
+                <img id="plantProgress" src="/assets/SVG/SVG/maxFlower.svg"/>
                 <p className="plant-notif"> 🌿🌿🌿 Your Oxygen has increased by 20 ! Amazing! ✨🌿🌿🌿 </p>
             </>
         );
@@ -37,7 +37,7 @@ export default function Plant() {
 
     if (vapedToday == "no" && moneySpent != 0) {
         plantProgress = (<>
-                <img id="plantProgress" src="/src/assets/SVG/SVG/half-flowered.svg"/>
+                <img id="plantProgress" src="/assets/SVG/SVG/half-flowered.svg"/>
                 <p className="plant-notif"> 🌿🌿🌿 Your Oxygen has increased by 15 ! 🌿🌿🌿 </p>
             </>
         );
@@ -49,7 +49,7 @@ export default function Plant() {
             <>
                 <img
                     id="plantProgress"
-                    src="/src/assets/SVG/SVG/half-flowered.svg"
+                    src="/assets/SVG/SVG/half-flowered.svg"
                 />
                 <p className="plant-notif"> 🌿🌿🌿 Your Oxygen has increased by 15 ! 🌿🌿🌿 </p>
             </>
@@ -60,7 +60,7 @@ export default function Plant() {
                 <>
                     <img
                         id="plantProgress"
-                        src="/src/assets/SVG/SVG/one-flower.svg"
+                        src="/assets/SVG/SVG/one-flower.svg"
                     />
                     <p className="plant-notif"> 🌿🌿 Your Oxygen has increased by 10 ! Good Job! 🌿🌿 </p>
                 </>
@@ -70,7 +70,7 @@ export default function Plant() {
                 plantProgress = (<>
                         <img
                             id="plantProgress"
-                            src="/src/assets/SVG/SVG/plantProgress.svg"
+                            src="/assets/SVG/SVG/plantProgress.svg"
                         />
                         <p className="plant-notif"> 🌿 Your Oxygen has increased by 2... You will get there!🌿 </p>
                     </>

@@ -1,7 +1,4 @@
 import "./index.css";
-import smokeFree from "/src/assets/smokeFree.png";
-import iconMoney from "/src/assets/icon-money.png";
-import noSmoke from "/src/assets/nosmoke-icon.png";
 import DisplayInput from "../displayInput";
 import { useState } from "preact/hooks";
 
@@ -39,7 +36,7 @@ export default function MyProgress({
       <DisplayInput user={user} />
       <div className="card">
         <div className="card-div">
-          <img className="icon" src={smokeFree} alt="smoke-free" />
+          <img className="icon" src={"/assets/smokeFree.png"} alt="smoke-free" />
           <p> Smoke Free</p>
         </div>
         <div className="d-flex w-100 justify-content-between">
@@ -56,14 +53,14 @@ export default function MyProgress({
           </div>
         </div>
         <div className="card-div moneySaved">
-          <img className="icon" src={iconMoney} alt="smoke-free" />
+          <img className="icon" src={"/assets/icon-money.png"} alt="smoke-free" />
           <p onClick={clickHandler} className="moneySaved letter">
             Money Saved
           </p>
         </div>
         <div onClick={clickHandler} className="moneySaved">${getWeeklyMoneySaved()}</div>
         <div className="card-div eCigarette">
-          <img className="icon" src={noSmoke} alt="smoke-free" />
+          <img className="icon" src={"/assets/nosmoke-icon.png"} alt="smoke-free" />
           <p className="d-flex flex-column eCigarette">
             e-cigarette (how many pods)
           </p>

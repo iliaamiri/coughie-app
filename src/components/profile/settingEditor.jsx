@@ -4,11 +4,11 @@ const Setting = () => {
       <span className="profile-span">Setting</span>
       <div className="setting-div">
         <div className="setting frist">
-          <img src="/src/assets/contact.svg" alt="contact" />
+          <img src="/assets/contact.svg" alt="contact" />
           <p className="p-setting">Contact us</p>
         </div>
         <div className="setting second">
-          <img src="/src/assets/help.svg" alt="help" />
+          <img src="/assets/help.svg" alt="help" />
           <p className="p-setting">Help</p>
         </div>
       </div>
