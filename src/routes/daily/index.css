@@ -35,10 +35,13 @@ h1.hours {
 h2.daily-checkin-title {
     z-index: 1;
     position: absolute;
-    margin-top: 30px;
+    margin-top: 135px;
     width: 100vw;
     text-align: center;
     color:#888ca2;
+}
+h2.daily-checkin-title.one-leaf {
+    margin-top: 35px;
 }
 
 p.plant-notif {

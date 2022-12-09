@@ -10,6 +10,7 @@ export default function Plant() {
     let dayNum = Number(localStorage.getItem("day"));
     let oxygen = Number(localStorage.getItem("oxygen"));
 
+    let isProgress = true;
     let plantProgress = (
         <img id="plantProgress" src="/assets/SVG/SVG/plantProgress.svg" alt={'progress of the plant'}/>
     );
@@ -28,6 +29,7 @@ export default function Plant() {
     }
 
     if (vapedToday == "no" && moneySpent == 0) {
+        isProgress = false;
         plantProgress = (<>
                 <img id="plantProgress" src="/assets/SVG/SVG/maxFlower.svg"/>
                 <p className="plant-notif"> 🌿🌿🌿 Your Oxygen has increased by 20 ! Amazing! ✨🌿🌿🌿 </p>
@@ -36,6 +38,7 @@ export default function Plant() {
     }
 
     if (vapedToday == "no" && moneySpent != 0) {
+        isProgress = false;
         plantProgress = (<>
                 <img id="plantProgress" src="/assets/SVG/SVG/half-flowered.svg"/>
                 <p className="plant-notif"> 🌿🌿🌿 Your Oxygen has increased by 15 ! 🌿🌿🌿 </p>
@@ -45,6 +48,7 @@ export default function Plant() {
     }
 
     if (vapedToday == "yes" && hoursWithoutVaping > 14) {
+        isProgress = false;
         plantProgress = (
             <>
                 <img
@@ -56,6 +60,7 @@ export default function Plant() {
         );
     } else {
         if (vapedToday == "yes" && hoursWithoutVaping >= 9) {
+            isProgress = false;
             plantProgress = (
                 <>
                     <img
@@ -67,6 +72,7 @@ export default function Plant() {
             );
         } else {
             if (vapedToday == "yes" && hoursWithoutVaping < 9) {
+                isProgress = true;
                 plantProgress = (<>
                         <img
                             id="plantProgress"
@@ -87,7 +93,7 @@ export default function Plant() {
 
             </div>
             <div className={'daily-checkin-container'}>
-                <h2 className={"daily-checkin-title"}>Day {dayNum}</h2>
+                <h2 className={`daily-checkin-title ${isProgress && 'one-leaf'}`}>Day {dayNum}</h2>
                 {plantProgress}
             </div>
 
